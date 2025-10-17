@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Los 50 de Norma! | Invitación</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Parisienne&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'parisienne': ['Parisienne', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-pink-50 via-purple-50 to-pink-100 overflow-x-hidden">
+
+    <!-- Sección Portada -->
+    <section id="portada" class="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-12 bg-gradient-to-br from-pink-50 via-white to-purple-50">
+
+        <!-- Decoración esquina superior izquierda: flores doradas -->
+        <div class="absolute top-0 left-0 w-48 md:w-80 opacity-70">
+            <svg viewBox="0 0 200 200" class="text-yellow-600">
+                <path d="M10,80 Q30,20 80,10 Q60,40 50,60 Q30,50 10,80" fill="currentColor" opacity="0.3"/>
+                <circle cx="30" cy="40" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M0,100 Q20,80 40,85 L35,95 Q15,90 0,100" fill="currentColor" opacity="0.4"/>
+            </svg>
+        </div>
+
+        <!-- Bola disco superior centro -->
+        <div class="absolute top-8 md:top-12 left-1/2 -translate-x-1/2 w-24 md:w-32 animate-spin-slow">
+            <div class="relative w-full h-full">
+                <div class="absolute inset-0 rounded-full bg-gradient-to-br from-yellow-400 via-yellow-600 to-yellow-700 shadow-2xl"></div>
+                <div class="absolute inset-2 rounded-full bg-gradient-to-tl from-yellow-300 to-yellow-500 opacity-60"></div>
+                <!-- Efecto mosaico -->
+                <div class="absolute inset-0 rounded-full" style="background: repeating-linear-gradient(45deg, transparent, transparent 8px, rgba(255,255,255,0.2) 8px, rgba(255,255,255,0.2) 10px);"></div>
+            </div>
+            <!-- Lazo rosa -->
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-16 h-8">
+                <div class="w-full h-full bg-pink-400 rounded-full opacity-80 shadow-lg"></div>
+            </div>
+        </div>
+
+        <!-- Globos rosados esquina derecha -->
+        <div class="absolute top-20 md:top-32 right-4 md:right-12 flex flex-col gap-4 animate-float">
+            <div class="w-12 h-14 md:w-16 md:h-20 bg-gradient-to-br from-pink-200 to-pink-300 rounded-full shadow-lg opacity-80"></div>
+            <div class="w-10 h-12 md:w-14 md:h-16 bg-gradient-to-br from-white to-pink-100 rounded-full shadow-lg opacity-70 ml-4"></div>
+        </div>
+
+        <!-- Contenido central -->
+        <div class="relative z-10 text-center max-w-4xl mx-auto">
+            <!-- Número 50 estilo globo dorado -->
+            <div class="relative inline-block mb-6">
+                <h1 class="text-[10rem] md:text-[16rem] font-bold font-playfair text-transparent bg-clip-text bg-gradient-to-b from-yellow-400 via-yellow-500 to-yellow-700 drop-shadow-2xl relative z-10" style="text-shadow: 4px 4px 8px rgba(0,0,0,0.2);">50</h1>
+                <!-- Efecto de brillo en los números -->
+                <div class="absolute inset-0 text-[10rem] md:text-[16rem] font-bold font-playfair text-yellow-300 opacity-30 blur-sm">50</div>
+            </div>
+
+            <p class="text-4xl md:text-6xl font-parisienne mb-8 text-pink-500 drop-shadow-md">Cumpleaños</p>
+            <h2 class="text-3xl md:text-5xl font-playfair mb-12 text-gray-800">Norma Sotelo Pérez</h2>
+
+            <div class="space-y-3 text-lg md:text-xl bg-white/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 inline-block shadow-xl border border-pink-200">
+                <p class="flex items-center justify-center gap-3 text-gray-800">🗓️ 27 de diciembre de 2025</p>
+                <p class="flex items-center justify-center gap-3 text-gray-800">🕒 03:30 pm</p>
+            </div>
+
+            <p class="mt-12 text-lg md:text-xl animate-bounce text-purple-700 font-semibold">Desliza para más detalles 👇</p>
+        </div>
+
+        <!-- Flores rosadas esquina inferior izquierda -->
+        <div class="absolute bottom-12 md:bottom-20 left-4 md:left-12 flex gap-3">
+            <div class="w-16 h-16 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-pink-300 to-pink-400 opacity-70 shadow-lg"></div>
+            <div class="w-12 h-12 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-pink-200 to-pink-300 opacity-60 shadow-md mt-4"></div>
+        </div>
+
+        <!-- Copa de vino rosado esquina inferior centro -->
+        <div class="absolute bottom-8 md:bottom-16 left-1/4 hidden md:block">
+            <div class="relative w-12 h-16">
+                <div class="absolute bottom-0 w-full h-2 bg-yellow-600 rounded-full"></div>
+                <div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-1 h-8 bg-gradient-to-b from-pink-200 to-yellow-600"></div>
+                <div class="absolute top-0 w-12 h-10 bg-gradient-to-br from-pink-200 to-pink-400 opacity-70 rounded-b-full"></div>
+                <!-- Lazo -->
+                <div class="absolute top-8 left-1/2 -translate-x-1/2 w-8 h-3 bg-yellow-500 opacity-60 rounded-full"></div>
+            </div>
+        </div>
+
+        <!-- Ramo de globos esquina inferior derecha -->
+        <div class="absolute bottom-8 md:bottom-16 right-4 md:right-12 flex flex-col-reverse items-center gap-2 animate-float-slow">
+            <div class="w-1 h-20 md:h-32 bg-pink-300 opacity-40"></div>
+            <div class="flex gap-2">
+                <div class="w-10 h-12 md:w-14 md:h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full shadow-lg"></div>
+                <div class="w-10 h-12 md:w-14 md:h-16 bg-gradient-to-br from-white to-gray-100 rounded-full shadow-lg"></div>
+                <div class="w-10 h-12 md:w-14 md:h-16 bg-gradient-to-br from-pink-200 to-pink-300 rounded-full shadow-lg"></div>
+            </div>
+        </div>
+
+        <!-- Confeti dorado flotante -->
+        <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-75"></div>
+        <div class="absolute top-1/3 right-1/3 w-3 h-3 bg-pink-400 transform rotate-45 animate-pulse opacity-60"></div>
+        <div class="absolute bottom-1/3 left-1/3 w-2 h-4 bg-yellow-500 transform -rotate-12 opacity-50"></div>
+        <div class="absolute top-2/3 right-1/4 w-3 h-1 bg-pink-300 opacity-40 animate-pulse"></div>
+    </section>
+
+    <!-- Sección Bienvenida -->
+    <section id="bienvenida" class="min-h-screen flex items-center justify-center px-4 py-16 md:py-24">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 transform hover:scale-105 transition-transform duration-300">
+                <div class="relative inline-block mb-8">
+                    <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-purple-500 rounded-3xl transform rotate-3"></div>
+                    <img src="Fotos/normiux.jpg" alt="Norma celebrando su cumpleaños 50" class="relative rounded-3xl shadow-xl w-full max-w-md mx-auto object-cover">
+                </div>
+                <p class="text-2xl md:text-3xl font-parisienne text-pink-600 mb-6">Mis 50 ❤️</p>
+                <p class="text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto">
+                    Preparamos este momento especial con mucho cariño y la familia Apaez Sotelo anhela poder compartirlo con su compañía.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cuenta Regresiva -->
+    <section id="cuenta-regresiva" class="min-h-screen flex items-center justify-center px-4 py-16 bg-gradient-to-br from-purple-100 to-pink-100">
+        <div class="max-w-6xl mx-auto text-center w-full">
+            <h3 class="text-3xl md:text-5xl font-playfair text-purple-800 mb-12">Tiempo que falta para el cumple</h3>
+            <div id="countdown" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 transform hover:scale-110 transition-transform">
+                    <span id="days" class="text-4xl md:text-6xl font-bold text-pink-600 block">00</span>
+                    <p class="text-sm md:text-lg text-gray-600 mt-2 uppercase tracking-wide">Días</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 transform hover:scale-110 transition-transform">
+                    <span id="hours" class="text-4xl md:text-6xl font-bold text-purple-600 block">00</span>
+                    <p class="text-sm md:text-lg text-gray-600 mt-2 uppercase tracking-wide">Horas</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 transform hover:scale-110 transition-transform">
+                    <span id="minutes" class="text-4xl md:text-6xl font-bold text-pink-600 block">00</span>
+                    <p class="text-sm md:text-lg text-gray-600 mt-2 uppercase tracking-wide">Minutos</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 transform hover:scale-110 transition-transform">
+                    <span id="seconds" class="text-4xl md:text-6xl font-bold text-purple-600 block">00</span>
+                    <p class="text-sm md:text-lg text-gray-600 mt-2 uppercase tracking-wide">Segundos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Galería -->
+    <section id="galeria" class="min-h-screen flex items-center justify-center px-4 py-16 md:py-24">
+        <div class="max-w-7xl mx-auto w-full">
+            <h3 class="text-3xl md:text-5xl font-playfair text-purple-800 mb-12 text-center">Sesión de fotos</h3>
+            <div class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide md:justify-center">
+                <div class="flex-shrink-0 w-80 md:w-96 snap-center">
+                    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform">
+                        <img src="Fotos/capulla.jpeg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover">
+                        <div class="p-6">
+                            <p class="text-sm text-pink-600 font-semibold mb-2">Sep 19, 2025</p>
+                            <p class="text-gray-700">Foto tomada en un hermoso campo de flores. 🌷</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-80 md:w-96 snap-center">
+                    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform">
+                        <img src="Fotos/FAMILIA.jpeg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover">
+                        <div class="p-6">
+                            <p class="text-sm text-pink-600 font-semibold mb-2">Oct 10, 2025</p>
+                            <p class="text-gray-700">Preparándonos para la fiesta. ¡Felicidad! ✨</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-gray-600 mt-8 md:hidden">Desliza horizontalmente para ver más fotos.</p>
+        </div>
+    </section>
+
+    <!-- Sección Ubicación -->
+    <section id="ubicacion" class="min-h-screen flex items-center justify-center px-4 py-16 bg-gradient-to-br from-purple-100 to-pink-100">
+        <div class="max-w-4xl mx-auto w-full">
+            <h3 class="text-3xl md:text-5xl font-playfair text-purple-800 mb-8 text-center">Ubicación de la fiesta</h3>
+            <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-10">
+                <p class="text-lg md:text-xl text-gray-700 mb-8 text-center">📍 M. Ávila Camacho 46, Benito Juárez, Xochitepec, Morelos, Mexico</p>
+
+                <div class="rounded-2xl overflow-hidden shadow-lg mb-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.8234567890123!2d-99.23122100000001!3d18.7966667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cddf5e5e5e5e5e%3A0x5e5e5e5e5e5e5e5e!2sM.%20%C3%81vila%20Camacho%2046%2C%20Benito%20Ju%C3%A1rez%2C%2062790%20Xochitepec%2C%20Mor.!5e0!3m2!1ses-419!2smx!4v1234567890123!5m2!1ses-419!2smx"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=M.+Avila+Camacho+46+Benito+Juarez+Xochitepec+Morelos+Mexico"
+                   target="_blank"
+                   class="block w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white text-center py-4 rounded-xl font-semibold text-lg hover:from-pink-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg">
+                    Abrir en Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            scroll-snap-type: y mandatory;
+        }
+
+        .section, section {
+            scroll-snap-align: start;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes spin-slow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-float-slow {
+            animation: float-slow 4s ease-in-out infinite;
+        }
+
+        .animate-spin-slow {
+            animation: spin-slow 20s linear infinite;
+        }
+    </style>
+
+    <script>
+        // Auto-scroll automático entre secciones
+        let currentSection = 0;
+        const sections = document.querySelectorAll('section');
+        let autoScrollEnabled = true;
+        let scrollTimeout;
+        let lastInteractionTime = Date.now();
+        const AUTO_SCROLL_INTERVAL = 8000; // 8 segundos entre transiciones
+        const INTERACTION_DELAY = 15000; // 15 segundos después de interacción manual
+
+        // Detectar interacción del usuario
+        function handleUserInteraction() {
+            lastInteractionTime = Date.now();
+            autoScrollEnabled = false;
+
+            // Reactivar auto-scroll después del delay
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                autoScrollEnabled = true;
+            }, INTERACTION_DELAY);
+        }
+
+        // Listeners para detectar interacción
+        window.addEventListener('wheel', handleUserInteraction, { passive: true });
+        window.addEventListener('touchstart', handleUserInteraction, { passive: true });
+        window.addEventListener('touchmove', handleUserInteraction, { passive: true });
+        window.addEventListener('keydown', handleUserInteraction);
+
+        // Detectar en qué sección está el usuario
+        function updateCurrentSection() {
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+            sections.forEach((section, index) => {
+                const sectionTop = section.offsetTop;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    currentSection = index;
+                }
+            });
+        }
+
+        // Auto-scroll a la siguiente sección
+        function autoScroll() {
+            if (!autoScrollEnabled) return;
+
+            const timeSinceLastInteraction = Date.now() - lastInteractionTime;
+            if (timeSinceLastInteraction < INTERACTION_DELAY) return;
+
+            currentSection = (currentSection + 1) % sections.length;
+            sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Iniciar auto-scroll
+        setInterval(autoScroll, AUTO_SCROLL_INTERVAL);
+
+        // Actualizar sección actual al hacer scroll
+        window.addEventListener('scroll', updateCurrentSection, { passive: true });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
