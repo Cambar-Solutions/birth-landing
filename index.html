@@ -21,6 +21,9 @@
 </head>
 <body class="bg-gradient-to-br from-pink-50 via-purple-50 to-pink-100 overflow-x-hidden">
 
+    <!-- Partículas flotantes de fondo -->
+    <div id="particles-container" class="fixed inset-0 pointer-events-none z-0"></div>
+
     <!-- Sección Portada -->
     <section id="portada" class="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-12 bg-gradient-to-br from-pink-50 via-white to-purple-50">
 
@@ -54,23 +57,86 @@
         </div>
 
         <!-- Contenido central -->
-        <div class="relative z-10 text-center max-w-4xl mx-auto">
-            <!-- Número 50 estilo globo dorado -->
-            <div class="relative inline-block mb-6">
-                <h1 class="text-[10rem] md:text-[16rem] font-bold font-playfair text-transparent bg-clip-text bg-gradient-to-b from-yellow-400 via-yellow-500 to-yellow-700 drop-shadow-2xl relative z-10" style="text-shadow: 4px 4px 8px rgba(0,0,0,0.2);">50</h1>
-                <!-- Efecto de brillo en los números -->
-                <div class="absolute inset-0 text-[10rem] md:text-[16rem] font-bold font-playfair text-yellow-300 opacity-30 blur-sm">50</div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto w-full flex flex-col items-center">
+            <!-- Número 50 estilo globo dorado mejorado -->
+            <div class="relative inline-block mb-6 group/number">
+                <!-- Múltiples capas de brillo -->
+                <div class="absolute inset-0 text-[8rem] md:text-[16rem] font-bold font-playfair text-yellow-300 opacity-20 blur-2xl animate-pulse">50</div>
+                <div class="absolute inset-0 text-[8rem] md:text-[16rem] font-bold font-playfair text-pink-400 opacity-15 blur-xl animate-pulse" style="animation-delay: 0.5s;">50</div>
+
+                <!-- Número principal con efecto 3D -->
+                <h1 class="text-[8rem] md:text-[16rem] font-bold font-playfair text-transparent bg-clip-text bg-gradient-to-b from-yellow-300 via-yellow-500 to-yellow-700 drop-shadow-2xl relative z-10 transform group-hover/number:scale-105 transition-transform duration-300" style="text-shadow: 4px 4px 8px rgba(0,0,0,0.2), 0 0 20px rgba(251, 191, 36, 0.5);">50</h1>
+
+                <!-- Estrellas decorativas alrededor del 50 -->
+                <div class="absolute -top-4 md:-top-8 -left-4 md:-left-8 text-2xl md:text-6xl animate-spin-slow">⭐</div>
+                <div class="absolute -top-4 md:-top-8 -right-4 md:-right-8 text-2xl md:text-6xl animate-spin-slow" style="animation-delay: 1s; animation-direction: reverse;">✨</div>
+                <div class="absolute -bottom-4 md:-bottom-8 -left-4 md:-left-8 text-xl md:text-5xl animate-bounce-slow">🌟</div>
+                <div class="absolute -bottom-4 md:-bottom-8 -right-4 md:-right-8 text-xl md:text-5xl animate-bounce-slow" style="animation-delay: 0.5s;">💫</div>
             </div>
 
-            <p class="text-4xl md:text-6xl font-parisienne mb-8 text-pink-500 drop-shadow-md">Cumpleaños</p>
-            <h2 class="text-3xl md:text-5xl font-playfair mb-12 text-gray-800">Norma Sotelo Pérez</h2>
-
-            <div class="space-y-3 text-lg md:text-xl bg-white/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 inline-block shadow-xl border border-pink-200">
-                <p class="flex items-center justify-center gap-3 text-gray-800">🗓️ 27 de diciembre de 2025</p>
-                <p class="flex items-center justify-center gap-3 text-gray-800">🕒 03:30 pm</p>
+            <!-- Título Cumpleaños mejorado -->
+            <div class="relative inline-block mb-8 w-full">
+                <div class="absolute inset-0 bg-gradient-to-r from-pink-400 to-purple-400 blur-lg opacity-30"></div>
+                <p class="relative text-3xl md:text-6xl font-parisienne text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-pink-600 to-purple-600 drop-shadow-lg">
+                    Cumpleaños
+                </p>
             </div>
 
-            <p class="mt-12 text-lg md:text-xl animate-bounce text-purple-700 font-semibold">Desliza para más detalles 👇</p>
+            <!-- Nombre mejorado -->
+            <div class="relative inline-block mb-12 w-full px-4">
+                <div class="absolute inset-0 bg-gradient-to-r from-purple-300 to-pink-300 blur-md opacity-20"></div>
+                <h2 class="relative text-2xl md:text-5xl font-playfair text-gray-800 font-bold">
+                    Norma Sotelo Pérez
+                </h2>
+                <div class="flex items-center justify-center gap-2 mt-3">
+                    <div class="w-12 md:w-16 h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent rounded-full"></div>
+                    <span class="text-lg md:text-xl">💐</span>
+                    <div class="w-12 md:w-16 h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent rounded-full"></div>
+                </div>
+            </div>
+
+            <!-- Tarjeta de información mejorada -->
+            <div class="relative w-full max-w-2xl px-4 flex justify-center">
+                <div class="relative inline-block group/info w-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-pink-400 via-purple-400 to-pink-400 rounded-2xl blur-lg opacity-30 group-hover/info:opacity-50 transition-opacity animate-pulse-glow"></div>
+                    <div class="relative space-y-3 text-base md:text-xl bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border-4 border-pink-200 transform group-hover/info:scale-105 transition-all duration-300 w-full">
+                        <!-- Decoraciones -->
+                        <div class="absolute -top-3 -left-3 w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full shadow-lg animate-bounce-slow"></div>
+                        <div class="absolute -top-3 -right-3 w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full shadow-lg animate-bounce-slow" style="animation-delay: 0.5s;"></div>
+
+                        <p class="flex items-center justify-center gap-2 md:gap-3 text-gray-800 font-semibold text-center">
+                            <span class="text-xl md:text-2xl animate-bounce-slow flex-shrink-0">🗓️</span>
+                            <span>Sabado 27 de Diciembre de 2025</span>
+                        </p>
+                        <div class="w-full h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent"></div>
+                        <p class="flex items-center justify-center gap-2 md:gap-3 text-gray-800 font-semibold">
+                            <span class="text-xl md:text-2xl animate-bounce-slow flex-shrink-0" style="animation-delay: 0.3s;">🕒</span>
+                            <span>03:30 pm</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mensaje de scroll mejorado -->
+            <div class="mt-12 flex flex-col items-center gap-4 w-full px-4">
+                <div class="relative inline-block w-full max-w-md">
+                    <div class="absolute inset-0 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 rounded-full blur-lg opacity-50 animate-pulse"></div>
+                    <div class="relative bg-white/90 backdrop-blur-sm px-6 md:px-8 py-3 md:py-4 rounded-full shadow-2xl border-2 border-pink-300 transform hover:scale-105 transition-all">
+                        <p class="text-base md:text-xl font-parisienne text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-purple-600 to-pink-600 font-bold text-center">
+                            Descubre más magia aquí abajo
+                        </p>
+                    </div>
+                </div>
+                <!-- Flechas animadas -->
+                <div class="flex flex-col gap-1 animate-bounce-slow items-center">
+                    <svg class="w-6 h-6 md:w-8 md:h-8 text-purple-500 animate-fade-bounce-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                    <svg class="w-6 h-6 md:w-8 md:h-8 text-pink-500 -mt-3 animate-fade-bounce-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+            </div>
         </div>
 
         <!-- Flores rosadas esquina inferior izquierda -->
@@ -100,101 +166,421 @@
             </div>
         </div>
 
-        <!-- Confeti dorado flotante -->
-        <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-75"></div>
-        <div class="absolute top-1/3 right-1/3 w-3 h-3 bg-pink-400 transform rotate-45 animate-pulse opacity-60"></div>
-        <div class="absolute bottom-1/3 left-1/3 w-2 h-4 bg-yellow-500 transform -rotate-12 opacity-50"></div>
-        <div class="absolute top-2/3 right-1/4 w-3 h-1 bg-pink-300 opacity-40 animate-pulse"></div>
+        <!-- Confeti dorado flotante mejorado -->
+        <div class="absolute top-1/4 left-1/4 w-3 h-3 bg-yellow-400 rounded-full animate-ping opacity-75 shadow-lg"></div>
+        <div class="absolute top-1/3 right-1/3 w-4 h-4 bg-pink-400 transform rotate-45 animate-pulse opacity-60 shadow-md"></div>
+        <div class="absolute bottom-1/3 left-1/3 w-3 h-5 bg-yellow-500 transform -rotate-12 opacity-50 animate-float"></div>
+        <div class="absolute top-2/3 right-1/4 w-4 h-2 bg-pink-300 opacity-40 animate-pulse shadow-sm"></div>
+
+        <!-- Más confeti y estrellas -->
+        <div class="absolute top-1/2 left-1/6 w-2 h-2 bg-purple-400 rounded-full animate-ping opacity-60" style="animation-delay: 0.5s;"></div>
+        <div class="absolute bottom-1/4 right-1/6 w-3 h-3 bg-yellow-300 rounded-full animate-pulse opacity-50" style="animation-delay: 1s;"></div>
+        <div class="absolute top-3/4 left-2/3 text-2xl opacity-20 animate-float" style="animation-delay: 0.8s;">✨</div>
+        <div class="absolute top-1/5 right-1/5 text-3xl opacity-15 animate-spin-slow">🎊</div>
+        <div class="absolute bottom-1/2 left-1/5 text-2xl opacity-20 animate-bounce-slow">🎈</div>
     </section>
 
     <!-- Sección Bienvenida -->
-    <section id="bienvenida" class="min-h-screen flex items-center justify-center px-4 py-16 md:py-24">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 transform hover:scale-105 transition-transform duration-300">
-                <div class="relative inline-block mb-8">
-                    <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-purple-500 rounded-3xl transform rotate-3"></div>
-                    <img src="Fotos/normiux.jpg" alt="Norma celebrando su cumpleaños 50" class="relative rounded-3xl shadow-xl w-full max-w-md mx-auto object-cover">
+    <section id="bienvenida" class="min-h-screen flex items-center justify-center px-4 py-16 md:py-24 relative overflow-hidden">
+        <!-- Efectos de fondo -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-10 right-10 w-40 h-40 bg-pink-200 rounded-full opacity-30 blur-2xl animate-float"></div>
+            <div class="absolute bottom-10 left-10 w-40 h-40 bg-purple-200 rounded-full opacity-30 blur-2xl animate-float-slow"></div>
+            <!-- Corazones flotantes -->
+            <div class="absolute top-1/4 left-1/4 text-4xl opacity-20 animate-float">💖</div>
+            <div class="absolute bottom-1/3 right-1/3 text-3xl opacity-15 animate-float-slow">✨</div>
+            <div class="absolute top-2/3 left-1/3 text-3xl opacity-20 animate-float" style="animation-delay: 1s;">🎉</div>
+        </div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10 px-4 w-full flex justify-center">
+            <div class="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-6 md:p-12 transform hover:scale-105 transition-all duration-300 border-4 border-transparent hover:border-pink-200 relative group w-full max-w-2xl">
+                <!-- Brillo detrás de la tarjeta -->
+                <div class="absolute inset-0 bg-gradient-to-br from-pink-300 via-purple-300 to-pink-300 rounded-3xl blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-300 -z-10"></div>
+
+                <!-- Decoraciones en las esquinas -->
+                <div class="absolute -top-4 md:-top-6 -left-4 md:-left-6 w-8 h-8 md:w-12 md:h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full animate-bounce-slow shadow-lg"></div>
+                <div class="absolute -top-4 md:-top-6 -right-4 md:-right-6 w-8 h-8 md:w-12 md:h-12 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full animate-bounce-slow shadow-lg" style="animation-delay: 0.5s;"></div>
+                <div class="absolute -bottom-4 md:-bottom-6 -left-4 md:-left-6 w-8 h-8 md:w-12 md:h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full animate-bounce-slow shadow-lg" style="animation-delay: 1s;"></div>
+                <div class="absolute -bottom-4 md:-bottom-6 -right-4 md:-right-6 w-8 h-8 md:w-12 md:h-12 bg-gradient-to-br from-pink-400 to-yellow-400 rounded-full animate-bounce-slow shadow-lg" style="animation-delay: 1.5s;"></div>
+
+                <div class="relative inline-block mb-8 group/img">
+                    <!-- Marco decorativo con múltiples capas -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-pink-400 via-purple-500 to-pink-500 rounded-3xl transform rotate-3 group-hover/img:rotate-6 transition-transform duration-300 shadow-2xl"></div>
+                    <div class="absolute inset-0 bg-gradient-to-tl from-yellow-400 via-pink-400 to-purple-400 rounded-3xl transform -rotate-3 group-hover/img:-rotate-6 transition-transform duration-300 opacity-50"></div>
+
+                    <!-- Efecto de brillo alrededor de la imagen -->
+                    <div class="absolute -inset-4 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 rounded-3xl blur-lg opacity-0 group-hover/img:opacity-60 transition-opacity duration-300 animate-pulse-glow"></div>
+
+                    <img src="Fotos/normiux.jpg" alt="Norma celebrando su cumpleaños 50" class="relative rounded-3xl shadow-xl w-full max-w-md mx-auto object-cover transform group-hover/img:scale-105 transition-transform duration-300">
                 </div>
-                <p class="text-2xl md:text-3xl font-parisienne text-pink-600 mb-6">Mis 50 ❤️</p>
-                <p class="text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto">
-                    Preparamos este momento especial con mucho cariño y la familia Apaez Sotelo anhela poder compartirlo con su compañía.
+
+                <!-- Título con efectos -->
+                <div class="relative inline-block mb-6 w-full">
+                    <div class="absolute inset-0 bg-gradient-to-r from-pink-400 to-purple-400 blur-md opacity-30"></div>
+                    <p class="relative text-xl md:text-3xl font-parisienne text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-purple-600 to-pink-600">
+                        Mis 50 ❤️
+                    </p>
+                </div>
+
+                <p class="text-base md:text-xl text-gray-700 leading-relaxed w-full px-2">
+                    Preparamos este momento especial con mucho cariño, la familia Apaez Sotelo anhela poder compartirlo con su compañía.
                 </p>
+
+                <!-- Línea decorativa -->
+                <div class="flex items-center justify-center gap-3 mt-8 w-full">
+                    <div class="w-16 md:w-20 h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent rounded-full"></div>
+                    <span class="text-xl md:text-2xl">🌸</span>
+                    <div class="w-16 md:w-20 h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent rounded-full"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Sección Cuenta Regresiva -->
-    <section id="cuenta-regresiva" class="min-h-screen flex items-center justify-center px-4 py-16 bg-gradient-to-br from-purple-100 to-pink-100">
-        <div class="max-w-6xl mx-auto text-center w-full">
-            <h3 class="text-3xl md:text-5xl font-playfair text-purple-800 mb-12">Tiempo que falta para el cumple</h3>
+    <section id="cuenta-regresiva" class="min-h-screen flex items-center justify-center px-4 py-16 bg-gradient-to-br from-purple-100 to-pink-100 relative overflow-hidden">
+        <!-- Efectos de fondo para el reloj -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-pink-300 rounded-full opacity-20 blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-300 rounded-full opacity-20 blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto text-center w-full relative z-10 px-4">
+            <!-- Título mejorado -->
+            <div class="relative inline-block mb-12 w-full">
+                <div class="absolute inset-0 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 blur-xl opacity-40 animate-pulse"></div>
+                <h3 class="relative text-2xl md:text-5xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-purple-700 mb-4 px-4">
+                    Tiempo que falta para el cumple
+                </h3>
+                <div class="flex items-center justify-center gap-2 mt-4">
+                    <div class="w-10 md:w-12 h-1 bg-gradient-to-r from-transparent via-pink-500 to-transparent rounded-full"></div>
+                    <span class="text-xl md:text-2xl animate-pulse">⏰</span>
+                    <div class="w-10 md:w-12 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent rounded-full"></div>
+                </div>
+            </div>
+
             <div id="countdown" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
-                <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 transform hover:scale-110 transition-transform">
-                    <span id="days" class="text-4xl md:text-6xl font-bold text-pink-600 block">00</span>
-                    <p class="text-sm md:text-lg text-gray-600 mt-2 uppercase tracking-wide">Días</p>
+                <!-- Días -->
+                <div class="countdown-box group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-pink-600 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity animate-pulse-glow"></div>
+                    <div class="relative bg-white rounded-2xl shadow-2xl p-6 md:p-8 transform group-hover:scale-110 transition-all duration-300 border-4 border-pink-200">
+                        <div class="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full shadow-lg animate-bounce-slow"></div>
+                        <span id="days" class="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-pink-700 block animate-number-pulse">00</span>
+                        <p class="text-sm md:text-lg text-gray-700 mt-2 uppercase tracking-wide font-semibold">Días</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 transform hover:scale-110 transition-transform">
-                    <span id="hours" class="text-4xl md:text-6xl font-bold text-purple-600 block">00</span>
-                    <p class="text-sm md:text-lg text-gray-600 mt-2 uppercase tracking-wide">Horas</p>
+
+                <!-- Horas -->
+                <div class="countdown-box group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity animate-pulse-glow" style="animation-delay: 0.5s;"></div>
+                    <div class="relative bg-white rounded-2xl shadow-2xl p-6 md:p-8 transform group-hover:scale-110 transition-all duration-300 border-4 border-purple-200">
+                        <div class="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full shadow-lg animate-bounce-slow" style="animation-delay: 0.2s;"></div>
+                        <span id="hours" class="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-purple-700 block animate-number-pulse">00</span>
+                        <p class="text-sm md:text-lg text-gray-700 mt-2 uppercase tracking-wide font-semibold">Horas</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 transform hover:scale-110 transition-transform">
-                    <span id="minutes" class="text-4xl md:text-6xl font-bold text-pink-600 block">00</span>
-                    <p class="text-sm md:text-lg text-gray-600 mt-2 uppercase tracking-wide">Minutos</p>
+
+                <!-- Minutos -->
+                <div class="countdown-box group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-pink-600 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity animate-pulse-glow" style="animation-delay: 1s;"></div>
+                    <div class="relative bg-white rounded-2xl shadow-2xl p-6 md:p-8 transform group-hover:scale-110 transition-all duration-300 border-4 border-pink-200">
+                        <div class="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full shadow-lg animate-bounce-slow" style="animation-delay: 0.4s;"></div>
+                        <span id="minutes" class="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-pink-700 block animate-number-pulse">00</span>
+                        <p class="text-sm md:text-lg text-gray-700 mt-2 uppercase tracking-wide font-semibold">Minutos</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 transform hover:scale-110 transition-transform">
-                    <span id="seconds" class="text-4xl md:text-6xl font-bold text-purple-600 block">00</span>
-                    <p class="text-sm md:text-lg text-gray-600 mt-2 uppercase tracking-wide">Segundos</p>
+
+                <!-- Segundos -->
+                <div class="countdown-box group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity animate-pulse-glow" style="animation-delay: 1.5s;"></div>
+                    <div class="relative bg-white rounded-2xl shadow-2xl p-6 md:p-8 transform group-hover:scale-110 transition-all duration-300 border-4 border-purple-200">
+                        <div class="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full shadow-lg animate-bounce-slow" style="animation-delay: 0.6s;"></div>
+                        <span id="seconds" class="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-purple-700 block animate-number-pulse">00</span>
+                        <p class="text-sm md:text-lg text-gray-700 mt-2 uppercase tracking-wide font-semibold">Segundos</p>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Mensaje adicional -->
+            <div class="mt-12 animate-fade-in w-full">
+                <p class="text-lg md:text-2xl font-parisienne text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">
+                    ¡La cuenta regresiva ha comenzado! ✨
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Sección Galería -->
-    <section id="galeria" class="min-h-screen flex items-center justify-center px-4 py-16 md:py-24">
-        <div class="max-w-7xl mx-auto w-full">
-            <h3 class="text-3xl md:text-5xl font-playfair text-purple-800 mb-12 text-center">Sesión de fotos</h3>
+    <section id="galeria" class="min-h-screen flex items-center justify-center px-4 py-16 md:py-24 relative overflow-hidden">
+        <!-- Efectos de fondo -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-20 left-20 w-32 h-32 bg-pink-200 rounded-full opacity-20 blur-2xl animate-float"></div>
+            <div class="absolute bottom-20 right-20 w-32 h-32 bg-purple-200 rounded-full opacity-20 blur-2xl animate-float-slow"></div>
+            <!-- Emojis flotantes -->
+            <div class="absolute top-1/4 right-1/4 text-3xl opacity-15 animate-spin-slow">📸</div>
+            <div class="absolute bottom-1/3 left-1/4 text-2xl opacity-10 animate-float">🌺</div>
+        </div>
+
+        <div class="max-w-7xl mx-auto w-full relative z-10">
+            <!-- Título mejorado -->
+            <div class="relative inline-block mb-12 w-full text-center">
+                <div class="absolute inset-0 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 blur-xl opacity-30"></div>
+                <h3 class="relative text-3xl md:text-5xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-purple-700 mb-4">
+                    Sesión de fotos
+                </h3>
+                <div class="flex items-center justify-center gap-2 mt-4">
+                    <div class="w-16 h-1 bg-gradient-to-r from-transparent via-pink-500 to-transparent rounded-full"></div>
+                    <span class="text-2xl">📷</span>
+                    <div class="w-16 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent rounded-full"></div>
+                </div>
+            </div>
+
             <div class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide md:justify-center">
-                <div class="flex-shrink-0 w-80 md:w-96 snap-center">
-                    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform">
-                        <img src="Fotos/capulla.jpeg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover">
-                        <div class="p-6">
-                            <p class="text-sm text-pink-600 font-semibold mb-2">Sep 19, 2025</p>
-                            <p class="text-gray-700">Foto tomada en un hermoso campo de flores. 🌷</p>
+                <!-- Foto 1 -->
+                <div class="flex-shrink-0 w-80 md:w-96 snap-center group">
+                    <div class="relative">
+                        <!-- Efecto glow detrás de la tarjeta -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-purple-500 rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+
+                        <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform group-hover:scale-105 group-hover:-rotate-1 transition-all duration-300 border-4 border-transparent group-hover:border-pink-300">
+                            <!-- Decoración esquina - Amarillo/Dorado -->
+                            <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
+
+                            <div class="relative overflow-hidden">
+                                <img src="Fotos/capulla.jpeg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <!-- Overlay con gradiente -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+
+                            <div class="p-6 bg-gradient-to-br from-white to-pink-50">
+                                <p class="text-sm text-pink-600 font-semibold mb-2 flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-pink-500 rounded-full animate-pulse"></span>
+                                    Diciembre 19, 2024
+                                </p>
+                                <p class="text-gray-700">Foto tomada en un hermoso campo de flores. 🌷</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex-shrink-0 w-80 md:w-96 snap-center">
-                    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform">
-                        <img src="Fotos/FAMILIA.jpeg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover">
-                        <div class="p-6">
-                            <p class="text-sm text-pink-600 font-semibold mb-2">Oct 10, 2025</p>
-                            <p class="text-gray-700">Preparándonos para la fiesta. ¡Felicidad! ✨</p>
+
+                <!-- Foto 2 -->
+                <div class="flex-shrink-0 w-80 md:w-96 snap-center group">
+                    <div class="relative">
+                        <!-- Efecto glow detrás de la tarjeta -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-500 rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+
+                        <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform group-hover:scale-105 group-hover:rotate-1 transition-all duration-300 border-4 border-transparent group-hover:border-purple-300">
+                            <!-- Decoración esquina - Rosa -->
+                            <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
+
+                            <div class="relative overflow-hidden">
+                                <img src="Fotos/FAMILIA.jpeg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <!-- Overlay con gradiente -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+
+                            <div class="p-6 bg-gradient-to-br from-white to-purple-50">
+                                <p class="text-sm text-purple-600 font-semibold mb-2 flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span>
+                                    Noviembre 10, 2024
+                                </p>
+                                <p class="text-gray-700">Preparándonos para la fiesta. ✨</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="flex-shrink-0 w-80 md:w-96 snap-center group">
+                    <div class="relative">
+                        <!-- Efecto glow detrás de la tarjeta -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-yellow-500 rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+
+                        <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform group-hover:scale-105 group-hover:-rotate-1 transition-all duration-300 border-4 border-transparent group-hover:border-pink-300">
+                            <!-- Decoración esquina - Púrpura -->
+                            <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
+
+                            <div class="relative overflow-hidden">
+                                <img src="Fotos/familiaa4.jpeg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <!-- Overlay con gradiente -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+
+                            <div class="p-6 bg-gradient-to-br from-white to-pink-50">
+                                <p class="text-sm text-pink-600 font-semibold mb-2 flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-pink-500 rounded-full animate-pulse"></span>
+                                    Agosto 26, 2023
+                                </p>
+                                <p class="text-gray-700">Un buen día con la mejor compañía.😎</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 4 -->
+                <div class="flex-shrink-0 w-80 md:w-96 snap-center group">
+                    <div class="relative">
+                        <!-- Efecto glow detrás de la tarjeta -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-yellow-500 rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+
+                        <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform group-hover:scale-105 group-hover:-rotate-1 transition-all duration-300 border-4 border-transparent group-hover:border-pink-300">
+                            <!-- Decoración esquina - Verde Agua/Turquesa -->
+                            <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-teal-400 to-cyan-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
+
+                            <div class="relative overflow-hidden">
+                                <img src="Fotos/familiachalma.jpg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <!-- Overlay con gradiente -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+
+                            <div class="p-6 bg-gradient-to-br from-white to-pink-50">
+                                <p class="text-sm text-pink-600 font-semibold mb-2 flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-pink-500 rounded-full animate-pulse"></span>
+                                    Agosto 26, 2023
+                                </p>
+                                <p class="text-gray-700">La felicidad está en estos momentos. ¡La familia lo es todo!  👑</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Foto 5 -->
+                <div class="flex-shrink-0 w-80 md:w-96 snap-center group">
+                    <div class="relative">
+                        <!-- Efecto glow detrás de la tarjeta -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-yellow-500 rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+
+                        <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform group-hover:scale-105 group-hover:-rotate-1 transition-all duration-300 border-4 border-transparent group-hover:border-pink-300">
+                            <!-- Decoración esquina - Naranja -->
+                            <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
+
+                            <div class="relative overflow-hidden">
+                                <img src="Fotos/trescruces.jpg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <!-- Overlay con gradiente -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+
+                            <div class="p-6 bg-gradient-to-br from-white to-pink-50">
+                                <p class="text-sm text-pink-600 font-semibold mb-2 flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-pink-500 rounded-full animate-pulse"></span>
+                                    Agosto 26, 2023
+                                </p>
+                                <p class="text-gray-700">Coleccionando recuerdos inolvidables. 📸</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Foto 6 -->
+                <div class="flex-shrink-0 w-80 md:w-96 snap-center group">
+                    <div class="relative">
+                        <!-- Efecto glow detrás de la tarjeta -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-yellow-500 rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+
+                        <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform group-hover:scale-105 group-hover:-rotate-1 transition-all duration-300 border-4 border-transparent group-hover:border-pink-300">
+                            <!-- Decoración esquina - Azul -->
+                            <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
+
+                            <div class="relative overflow-hidden">
+                                <img src="Fotos/familiatijuana.jpg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <!-- Overlay con gradiente -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+
+                            <div class="p-6 bg-gradient-to-br from-white to-pink-50">
+                                <p class="text-sm text-pink-600 font-semibold mb-2 flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-pink-500 rounded-full animate-pulse"></span>
+                                    Agosto 26, 2023
+                                </p>
+                                <p class="text-gray-700">Donde la vida nos ponga, mientras estemos juntos. 💕</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <p class="text-center text-gray-600 mt-8 md:hidden">Desliza horizontalmente para ver más fotos.</p>
+
+            <!-- Mensaje mejorado -->
+            <div class="text-center mt-8 md:hidden">
+                <div class="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border-2 border-pink-200">
+                    <span class="text-pink-500 animate-pulse">👉</span>
+                    <p class="text-gray-700 font-semibold">Desliza para ver más fotos</p>
+                    <span class="text-pink-500 animate-pulse">👈</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Sección Ubicación -->
-    <section id="ubicacion" class="min-h-screen flex items-center justify-center px-4 py-16 bg-gradient-to-br from-purple-100 to-pink-100">
-        <div class="max-w-4xl mx-auto w-full">
-            <h3 class="text-3xl md:text-5xl font-playfair text-purple-800 mb-8 text-center">Ubicación de la fiesta</h3>
-            <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-10">
-                <p class="text-lg md:text-xl text-gray-700 mb-8 text-center">📍 M. Ávila Camacho 46, Benito Juárez, Xochitepec, Morelos, Mexico</p>
+    <section id="ubicacion" class="min-h-screen flex items-center justify-center px-4 py-16 bg-gradient-to-br from-purple-100 to-pink-100 relative overflow-hidden">
+        <!-- Efectos de fondo -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-1/3 left-1/3 w-48 h-48 bg-pink-300 rounded-full opacity-20 blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-300 rounded-full opacity-20 blur-3xl animate-pulse" style="animation-delay: 1.5s;"></div>
+            <!-- Emojis flotantes -->
+            <div class="absolute top-20 right-1/4 text-4xl opacity-15 animate-float">🎪</div>
+            <div class="absolute bottom-20 left-1/4 text-3xl opacity-10 animate-float-slow">🎉</div>
+            <div class="absolute top-1/2 right-1/3 text-2xl opacity-10 animate-bounce-slow">📍</div>
+        </div>
 
-                <div class="rounded-2xl overflow-hidden shadow-lg mb-6">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.8234567890123!2d-99.23122100000001!3d18.7966667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cddf5e5e5e5e5e%3A0x5e5e5e5e5e5e5e5e!2sM.%20%C3%81vila%20Camacho%2046%2C%20Benito%20Ju%C3%A1rez%2C%2062790%20Xochitepec%2C%20Mor.!5e0!3m2!1ses-419!2smx!4v1234567890123!5m2!1ses-419!2smx"
-                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+        <div class="max-w-4xl mx-auto w-full relative z-10">
+            <!-- Título mejorado -->
+            <div class="relative inline-block mb-8 w-full text-center">
+                <div class="absolute inset-0 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 blur-xl opacity-30 animate-pulse"></div>
+                <h3 class="relative text-3xl md:text-5xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-purple-700 mb-4">
+                    Ubicación de la fiesta
+                </h3>
+                <div class="flex items-center justify-center gap-2 mt-4">
+                    <div class="w-16 h-1 bg-gradient-to-r from-transparent via-pink-500 to-transparent rounded-full"></div>
+                    <span class="text-2xl animate-pulse">🗺️</span>
+                    <div class="w-16 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-6 md:p-10 relative group border-4 border-transparent hover:border-pink-200 transition-all duration-300">
+                <!-- Brillo detrás de la tarjeta -->
+                <div class="absolute inset-0 bg-gradient-to-br from-pink-300 via-purple-300 to-pink-300 rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-300 -z-10"></div>
+
+                <!-- Decoraciones en las esquinas -->
+                <div class="absolute -top-4 -left-4 w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full animate-bounce-slow shadow-lg"></div>
+                <div class="absolute -top-4 -right-4 w-10 h-10 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full animate-bounce-slow shadow-lg" style="animation-delay: 0.5s;"></div>
+                <div class="absolute -bottom-4 -left-4 w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full animate-bounce-slow shadow-lg" style="animation-delay: 1s;"></div>
+                <div class="absolute -bottom-4 -right-4 w-10 h-10 bg-gradient-to-br from-pink-400 to-yellow-400 rounded-full animate-bounce-slow shadow-lg" style="animation-delay: 1.5s;"></div>
+
+                <!-- Dirección mejorada -->
+                <div class="relative mb-8">
+                    <div class="absolute inset-0 bg-gradient-to-r from-pink-200 to-purple-200 blur-sm opacity-50 rounded-xl"></div>
+                    <p class="relative text-lg md:text-xl text-gray-800 text-center py-4 px-6 bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl border-2 border-pink-200 font-semibold flex items-center justify-center gap-3">
+                        <span class="text-2xl animate-bounce-slow">📍</span>
+                        M. Ávila Camacho 46, Benito Juárez, Xochitepec, Morelos, Mexico
+                    </p>
                 </div>
 
-                <a href="https://www.google.com/maps/search/?api=1&query=M.+Avila+Camacho+46+Benito+Juarez+Xochitepec+Morelos+Mexico"
-                   target="_blank"
-                   class="block w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white text-center py-4 rounded-xl font-semibold text-lg hover:from-pink-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg">
-                    Abrir en Google Maps
-                </a>
+                <!-- Mapa con efectos -->
+                <div class="relative group/map mb-6">
+                    <div class="absolute -inset-2 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 rounded-2xl blur-md opacity-30 group-hover/map:opacity-50 transition-opacity"></div>
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white ring-4 ring-pink-200 group-hover/map:ring-purple-300 transition-all">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.8234567890123!2d-99.23122100000001!3d18.7966667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cddf5e5e5e5e5e%3A0x5e5e5e5e5e5e5e5e!2sM.%20%C3%81vila%20Camacho%2046%2C%20Benito%20Ju%C3%A1rez%2C%2062790%20Xochitepec%2C%20Mor.!5e0!3m2!1ses-419!2smx!4v1234567890123!5m2!1ses-419!2smx"
+                            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Botón mejorado -->
+                <div class="relative group/button">
+                    <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover/button:opacity-75 transition-opacity animate-pulse-glow"></div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=M.+Avila+Camacho+46+Benito+Juarez+Xochitepec+Morelos+Mexico"
+                       target="_blank"
+                       class="relative block w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white text-center py-5 rounded-xl font-bold text-lg hover:from-pink-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-2xl border-2 border-white flex items-center justify-center gap-3">
+                        <span class="text-2xl">🗺️</span>
+                        Abrir en Google Maps
+                        <span class="text-2xl">📱</span>
+                    </a>
+                </div>
+
+                <!-- Mensaje adicional -->
+                <div class="mt-6 text-center">
+                    <p class="text-sm md:text-base text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 font-semibold">
+                        ¡Te esperamos con mucho cariño! 💕
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -235,6 +621,49 @@
             100% { transform: rotate(360deg); }
         }
 
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes fade-bounce-1 {
+            0%, 100% { transform: translateY(0); opacity: 0.3; }
+            50% { transform: translateY(5px); opacity: 1; }
+        }
+
+        @keyframes fade-bounce-2 {
+            0%, 100% { transform: translateY(0); opacity: 0.2; }
+            50% { transform: translateY(5px); opacity: 0.8; }
+        }
+
+        @keyframes particle-float {
+            0% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(var(--tx)) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                transform: scale(0) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1) rotate(180deg);
+                opacity: 1;
+            }
+        }
+
         .animate-float {
             animation: float 3s ease-in-out infinite;
         }
@@ -246,9 +675,205 @@
         .animate-spin-slow {
             animation: spin-slow 20s linear infinite;
         }
+
+        .animate-bounce-slow {
+            animation: bounce-slow 2s ease-in-out infinite;
+        }
+
+        .animate-fade-bounce-1 {
+            animation: fade-bounce-1 2s ease-in-out infinite;
+        }
+
+        .animate-fade-bounce-2 {
+            animation: fade-bounce-2 2s ease-in-out infinite 0.3s;
+        }
+
+        /* Estilos para partículas */
+        .particle {
+            position: absolute;
+            pointer-events: none;
+            animation: particle-float linear infinite;
+        }
+
+        .particle-star {
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, #fbbf24 0%, #f59e0b 50%, transparent 100%);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        .particle-circle {
+            border-radius: 50%;
+            background: radial-gradient(circle, #ec4899 0%, #be185d 70%, transparent 100%);
+        }
+
+        .particle-sparkle {
+            animation: sparkle 2s ease-in-out infinite;
+            background: linear-gradient(45deg, #fbbf24, #ec4899, #a855f7);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        /* Animaciones para el reloj de cuenta regresiva */
+        .countdown-box {
+            position: relative;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.75;
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes number-pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-pulse-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        .animate-number-pulse {
+            animation: number-pulse 2s ease-in-out infinite;
+        }
+
+        .animate-fade-in {
+            animation: fade-in 1.5s ease-out;
+        }
+
+        /* Animaciones adicionales para efectos globales */
+        @keyframes shimmer {
+            0% {
+                background-position: -100% 0;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+
+        @keyframes wiggle {
+            0%, 100% {
+                transform: rotate(-3deg);
+            }
+            50% {
+                transform: rotate(3deg);
+            }
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% {
+                box-shadow: 0 0 5px rgba(236, 72, 153, 0.3),
+                            0 0 10px rgba(236, 72, 153, 0.2),
+                            0 0 15px rgba(236, 72, 153, 0.1);
+            }
+            50% {
+                box-shadow: 0 0 10px rgba(236, 72, 153, 0.5),
+                            0 0 20px rgba(236, 72, 153, 0.4),
+                            0 0 30px rgba(236, 72, 153, 0.3);
+            }
+        }
+
+        /* Mejoras para interactividad */
+        .group:hover .group-hover\:animate-wiggle {
+            animation: wiggle 0.5s ease-in-out;
+        }
+
+        /* Efectos de desvanecimiento en cascada */
+        .fade-cascade-1 {
+            animation: fade-in 0.6s ease-out 0.1s both;
+        }
+
+        .fade-cascade-2 {
+            animation: fade-in 0.6s ease-out 0.3s both;
+        }
+
+        .fade-cascade-3 {
+            animation: fade-in 0.6s ease-out 0.5s both;
+        }
+
+        .fade-cascade-4 {
+            animation: fade-in 0.6s ease-out 0.7s both;
+        }
     </style>
 
     <script>
+        // Sistema de partículas flotantes
+        function createParticle() {
+            const container = document.getElementById('particles-container');
+            const particle = document.createElement('div');
+
+            // Tipos de partículas: estrella, círculo, o sparkle
+            const types = ['particle-star', 'particle-circle', 'particle-sparkle'];
+            const randomType = types[Math.floor(Math.random() * types.length)];
+
+            particle.classList.add('particle', randomType);
+
+            // Tamaño aleatorio
+            const size = Math.random() * 6 + 2; // 2-8px
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+
+            // Posición horizontal aleatoria
+            const startX = Math.random() * window.innerWidth;
+            particle.style.left = startX + 'px';
+            particle.style.bottom = '-10px';
+
+            // Desplazamiento horizontal durante la animación
+            const drift = (Math.random() - 0.5) * 100; // -50px a 50px
+            particle.style.setProperty('--tx', drift + 'px');
+
+            // Duración aleatoria de la animación
+            const duration = Math.random() * 15 + 10; // 10-25 segundos
+            particle.style.animationDuration = duration + 's';
+
+            // Delay aleatorio
+            const delay = Math.random() * 5;
+            particle.style.animationDelay = delay + 's';
+
+            container.appendChild(particle);
+
+            // Eliminar partícula después de que termine la animación
+            setTimeout(() => {
+                particle.remove();
+            }, (duration + delay) * 1000);
+        }
+
+        // Crear partículas continuamente
+        function initParticles() {
+            // Crear partículas iniciales
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => createParticle(), i * 200);
+            }
+
+            // Crear nuevas partículas periódicamente
+            setInterval(() => {
+                createParticle();
+            }, 800); // Nueva partícula cada 800ms
+        }
+
+        // Iniciar cuando la página cargue
+        window.addEventListener('load', initParticles);
+
         // Auto-scroll automático entre secciones
         let currentSection = 0;
         const sections = document.querySelectorAll('section');
