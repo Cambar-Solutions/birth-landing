@@ -296,3 +296,90 @@ h1, h2, h3 {
         flex: 0 0 250px;
     }
 }
+
+/* --- ITINERARIO: estilos específicos --- */
+.itinerario-card {
+    position: relative;
+    overflow: visible;
+    transition: transform 0.3s ease;
+}
+
+.itinerario-card:hover {
+    transform: translateY(-4px);
+}
+
+.card-surface {
+    position: relative;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.itinerario-card:hover .card-surface {
+    box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.15);
+}
+
+.itinerario-ribbon {
+    position: absolute;
+    top: 1.5rem;
+    right: -2rem;
+    width: 8rem;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #f472b6 50%, transparent);
+    transform: rotate(45deg);
+    transform-origin: left center;
+    opacity: 0.7;
+}
+
+.itinerario-row {
+    display: table-row;
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid rgba(244, 114, 182, 0.1);
+}
+
+.itinerario-row:last-child {
+    border-bottom: none;
+}
+
+.itinerario-row:hover {
+    background-color: rgba(244, 114, 182, 0.05);
+}
+
+.itinerario-time {
+    padding: 1rem 1.5rem;
+    color: #f472b6;
+    font-weight: 600;
+    text-align: right;
+    white-space: nowrap;
+    width: 35%;
+    font-size: 0.95rem;
+}
+
+.evento-texto {
+    padding: 1rem 1.5rem;
+    color: #4b5563;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.evento-emoji {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.itinerario-row:hover .evento-emoji {
+    transform: scale(1.2);
+}
+
+@keyframes slide-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up {
+    animation: slide-up 600ms ease-out both;
+}
