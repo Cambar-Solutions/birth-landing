@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Los 50 de Norma! | Invitación</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Control de música -->
+    <div id="musicControl" class="fixed bottom-4 right-4 z-50 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg border-2 border-pink-200 cursor-pointer flex items-center gap-2 transition-all hover:scale-105">
+        <button id="toggleMusic" class="text-2xl">🎵</button>
+        <span class="text-sm font-medium text-pink-600">La Bikina</span>
+    </div>
+
+    <!-- Audio element -->
+    <audio id="backgroundMusic" loop>
+        <source src="music/la-bikina.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Parisienne&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -192,12 +204,13 @@
         </div>
 
         <div class="max-w-4xl mx-auto text-center relative z-10 px-4 w-full flex justify-center">
-            <div class="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-6 md:p-12 transform hover:scale-105 transition-all duration-300 border-4 border-transparent hover:border-pink-200 relative group w-full max-w-2xl">
+            <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-12 transform hover:scale-105 transition-all duration-300 border-4 border-pink-200 relative group w-full max-w-2xl">
                 <div class="relative inline-block mb-8">
-                    <!-- Marco simplificado -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-pink-500 rounded-3xl shadow-xl"></div>
+                    <!-- Marco decorativo con efecto de brillo -->
+                    <div class="absolute -inset-4 bg-gradient-to-r from-pink-300 via-pink-200 to-pink-300 rounded-[2rem] opacity-75" style="filter: blur(10px);"></div>
+                    <div class="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 rounded-[2rem]"></div>
 
-                    <img src="Fotos/normiux.jpg" alt="Norma celebrando su cumpleaños 50" class="relative rounded-3xl shadow-xl w-full max-w-md mx-auto object-cover transform group-hover/img:scale-105 transition-transform duration-300">
+                    <img src="Fotos/normiux.jpg" alt="Norma celebrando su cumpleaños 50" class="relative rounded-3xl shadow-xl w-full max-w-md mx-auto object-cover transform hover:scale-105 transition-transform duration-300 border-4 border-white">
                 </div>
 
                 <!-- Título con efectos -->
@@ -392,24 +405,20 @@
                 </div>
             </div>
 
-            <div class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide md:justify-center">
+            <div class="flex overflow-x-auto gap-6 pb-8 pt-4 snap-x snap-mandatory scrollbar-hide md:justify-center">
                 <!-- Foto 1 -->
                 <div class="flex-shrink-0 w-80 md:w-96 snap-center group">
-                    <div class="relative">
-                        <!-- Efecto glow detrás de la tarjeta -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-purple-500 rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                    <div class="relative p-3">
+                        <!-- Marco decorativo con efecto de brillo -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-pink-300 via-pink-200 to-pink-300 rounded-[2rem] opacity-75" style="filter: blur(10px);"></div>
+                        <div class="absolute inset-0.5 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 rounded-[2rem]"></div>
 
-                        <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform group-hover:scale-105 group-hover:-rotate-1 transition-all duration-300 border-4 border-transparent group-hover:border-pink-300">
-                            <!-- Decoración esquina - Amarillo/Dorado -->
-                            <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
-
+                        <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform group-hover:scale-105 transition-all duration-300 border-4 border-white">
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/normitis.png" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
-                                <!-- Overlay con gradiente -->
-                                <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <img src="Fotos/normitis.png" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover transition-transform duration-500 hover:scale-110">
                             </div>
 
-                            <div class="p-6 bg-gradient-to-br from-white to-pink-50">
+                            <div class="p-6 bg-white">
                                 <p class="text-gray-700">Un paseo entre colores y aromas. 🌼</p>
                             </div>
                         </div>
@@ -418,13 +427,11 @@
                 <!-- Foto 1 -->
                 <div class="flex-shrink-0 w-80 md:w-96 snap-center group">
                     <div class="relative">
-                        <!-- Efecto glow detrás de la tarjeta -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-purple-500 rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                        <!-- Marco decorativo con efecto de brillo -->
+                        <div class="absolute -inset-4 bg-gradient-to-r from-pink-300 via-pink-200 to-pink-300 rounded-[2rem] opacity-75" style="filter: blur(10px);"></div>
+                        <div class="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 rounded-[2rem]"></div>
 
-                        <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform group-hover:scale-105 group-hover:-rotate-1 transition-all duration-300 border-4 border-transparent group-hover:border-pink-300">
-                            <!-- Decoración esquina - Amarillo/Dorado -->
-                            <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
-
+                        <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform group-hover:scale-105 transition-all duration-300 border-4 border-white">
                             <div class="relative overflow-hidden">
                                 <img src="Fotos/capulla.jpeg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
                                 <!-- Overlay con gradiente -->
@@ -1222,5 +1229,47 @@
     </script>
 
     <script src="script.js"></script>
+
+    <!-- Script para control de música -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const music = document.getElementById('backgroundMusic');
+            const toggleButton = document.getElementById('toggleMusic');
+            const musicControl = document.getElementById('musicControl');
+            let isPlaying = false;
+
+            // Función para reproducir/pausar la música
+            function toggleMusic() {
+                if (isPlaying) {
+                    music.pause();
+                    toggleButton.textContent = '🎵';
+                } else {
+                    music.play();
+                    toggleButton.textContent = '⏸️';
+                }
+                isPlaying = !isPlaying;
+            }
+
+            // Iniciar música con el primer click o interacción del usuario
+            const startMusic = () => {
+                if (!isPlaying) {
+                    toggleMusic();
+                }
+                document.removeEventListener('click', startMusic);
+            };
+
+            // Escuchar clicks en el botón de música
+            toggleButton.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleMusic();
+            });
+
+            // Escuchar el primer click en cualquier parte de la página
+            document.addEventListener('click', startMusic);
+
+            // Animación suave del control de música
+            musicControl.classList.add('animate-fade-in');
+        });
+    </script>
 </body>
 </html>
