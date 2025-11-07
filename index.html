@@ -1313,22 +1313,23 @@
             animation: shimmer 3s infinite;
         }
 
-        /* 3. Animaciones de scroll */
+        /* 3. Animaciones de scroll - Sutiles y elegantes */
         .scroll-animate {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            opacity: 0;
+            transform: translateY(20px) scale(0.98);
+            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .scroll-animate.visible {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) scale(1);
         }
 
         /* Hacer que los elementos de portada sean visibles desde el inicio */
         #portada .scroll-animate {
             opacity: 1 !important;
-            transform: translateY(0) !important;
+            transform: translateY(0) scale(1) !important;
         }
 
         /* Eliminar fondo blanco del número 50 - FORZADO */
@@ -1416,24 +1417,26 @@
 
         .scroll-animate-left {
             opacity: 0;
-            transform: translateX(-50px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transform: translateX(-30px) scale(0.98);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .scroll-animate-left.visible {
             opacity: 1;
-            transform: translateX(0);
+            transform: translateX(0) scale(1);
         }
 
         .scroll-animate-right {
             opacity: 0;
-            transform: translateX(50px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transform: translateX(30px) scale(0.98);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .scroll-animate-right.visible {
             opacity: 1;
-            transform: translateX(0);
+            transform: translateX(0) scale(1);
         }
 
         /* Barras de audio visualizador */
@@ -1898,16 +1901,20 @@
             setTimeout(createConfetti, 500);
         });
 
-        // 2. ANIMACIONES AL HACER SCROLL
+        // 2. ANIMACIONES AL HACER SCROLL - Más sutiles y escalonadas
         function handleScrollAnimations() {
             const animatedElements = document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right');
 
-            animatedElements.forEach(element => {
+            animatedElements.forEach((element, index) => {
                 const elementTop = element.getBoundingClientRect().top;
                 const elementBottom = element.getBoundingClientRect().bottom;
 
-                if (elementTop < window.innerHeight * 0.85 && elementBottom > 0) {
-                    element.classList.add('visible');
+                // Activar cuando el elemento está en el 80% de la ventana (más temprano y suave)
+                if (elementTop < window.innerHeight * 0.80 && elementBottom > 0) {
+                    // Agregar un pequeño delay escalonado para que aparezcan uno tras otro
+                    setTimeout(() => {
+                        element.classList.add('visible');
+                    }, index * 50); // 50ms entre cada elemento para un efecto cascada más ágil
                 }
             });
         }
@@ -1943,7 +1950,7 @@
                 const scrolled = window.pageYOffset;
 
                 parallaxElements.forEach(element => {
-                    const speed = element.dataset.speed || 0.5;
+                    const speed = element.dataset.speed || 0.4;
                     const yPos = -(scrolled * speed);
                     element.style.transform = `translateY(${yPos}px)`;
                 });
