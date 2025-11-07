@@ -7,22 +7,55 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Control de música MINIMALISTA -->
-    <div id="musicControl" class="fixed bottom-3 right-3 z-50 group">
-        <button id="toggleMusic" class="w-12 h-12 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full shadow-lg flex items-center justify-center text-lg cursor-pointer transition-all hover:scale-110 hover:shadow-xl border-2 border-white/50">
-            🎵
+    <div id="musicControl" class="fixed bottom-6 right-6 z-50 group">
+        <!-- Botón de música con diseño de disco de vinilo -->
+        <button id="toggleMusic" class="relative w-20 h-20 cursor-pointer transition-all hover:scale-110 music-vinyl-button">
+            <!-- Anillo de pulso llamativo -->
+            <div class="absolute inset-0 rounded-full call-to-action-ring"></div>
+
+            <!-- Ondas de sonido externas animadas -->
+            <div class="absolute inset-0 rounded-full sound-wave-ring sound-wave-1"></div>
+            <div class="absolute inset-0 rounded-full sound-wave-ring sound-wave-2"></div>
+            <div class="absolute inset-0 rounded-full sound-wave-ring sound-wave-3"></div>
+
+            <!-- Disco de vinilo principal -->
+            <div class="absolute inset-0 rounded-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 shadow-2xl vinyl-disc">
+                <!-- Ranuras del vinilo -->
+                <div class="absolute inset-2 rounded-full border-2 border-slate-700/50"></div>
+                <div class="absolute inset-3 rounded-full border border-slate-600/40"></div>
+                <div class="absolute inset-4 rounded-full border border-slate-600/30"></div>
+                <div class="absolute inset-5 rounded-full border border-slate-600/20"></div>
+
+                <!-- Etiqueta central del vinilo -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 shadow-lg flex items-center justify-center vinyl-label">
+                    <div class="w-2 h-2 rounded-full bg-slate-900"></div>
+                </div>
+
+                <!-- Icono de nota musical -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-cyan-400 text-2xl vinyl-icon">
+                    ♪
+                </div>
+            </div>
+
+            <!-- Glow effect neón -->
+            <div class="absolute inset-0 rounded-full neon-glow"></div>
+
+            <!-- Efecto de brillo rotativo -->
+            <div class="absolute inset-0 rounded-full shimmer-effect"></div>
         </button>
 
-        <!-- Tooltip que aparece cuando la música está reproduciéndose -->
-        <div id="songTooltip" class="absolute bottom-full right-0 mb-2 opacity-0 transition-all duration-300 pointer-events-none transform translate-y-2">
-            <div class="bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-lg border border-pink-200 whitespace-nowrap">
-                <div class="flex items-center gap-2">
-                    <!-- Visualizador mini (oculto por defecto) -->
-                    <div class="flex items-end gap-0.5 h-3" id="audioVisualizer" style="display: none;">
-                        <div class="w-0.5 bg-pink-500 rounded-full audio-bar" style="animation-duration: 0.6s;"></div>
-                        <div class="w-0.5 bg-pink-500 rounded-full audio-bar" style="animation-duration: 0.8s; animation-delay: 0.1s;"></div>
-                        <div class="w-0.5 bg-pink-500 rounded-full audio-bar" style="animation-duration: 0.7s; animation-delay: 0.2s;"></div>
+        <!-- Tooltip mejorado -->
+        <div id="songTooltip" class="absolute bottom-full right-0 mb-3 opacity-0 transition-all duration-300 pointer-events-none transform translate-y-2">
+            <div class="bg-gradient-to-r from-slate-900 to-slate-800 backdrop-blur-sm px-4 py-2 rounded-xl shadow-2xl border border-cyan-500/30 whitespace-nowrap">
+                <div class="flex items-center gap-3">
+                    <!-- Visualizador de audio mejorado -->
+                    <div class="flex items-end gap-1 h-4" id="audioVisualizer" style="display: none;">
+                        <div class="w-1 bg-gradient-to-t from-cyan-500 to-blue-400 rounded-full audio-bar"></div>
+                        <div class="w-1 bg-gradient-to-t from-blue-500 to-purple-400 rounded-full audio-bar" style="animation-delay: 0.1s;"></div>
+                        <div class="w-1 bg-gradient-to-t from-purple-500 to-pink-400 rounded-full audio-bar" style="animation-delay: 0.2s;"></div>
+                        <div class="w-1 bg-gradient-to-t from-cyan-500 to-blue-400 rounded-full audio-bar" style="animation-delay: 0.3s;"></div>
                     </div>
-                    <span class="text-xs font-medium text-pink-600">La Bikina</span>
+                    <span class="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">La Bikina</span>
                 </div>
             </div>
         </div>
@@ -91,14 +124,6 @@
                 <!-- Círculo de resplandor animado de fondo -->
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div class="w-[24rem] h-[24rem] sm:w-[28rem] sm:h-[28rem] md:w-[36rem] md:h-[36rem] rounded-full bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 opacity-25 blur-3xl animate-pulse"></div>
-                </div>
-
-                <!-- Anillos de brillo giratorios -->
-                <div class="absolute inset-0 flex items-center justify-center animate-spin-slow" style="animation-duration: 20s;">
-                    <div class="w-[22rem] h-[22rem] sm:w-[26rem] sm:h-[26rem] md:w-[32rem] md:h-[32rem] rounded-full border-4 border-yellow-300 opacity-35"></div>
-                </div>
-                <div class="absolute inset-0 flex items-center justify-center animate-spin-slow" style="animation-duration: 15s; animation-direction: reverse;">
-                    <div class="w-[23rem] h-[23rem] sm:w-[27rem] sm:h-[27rem] md:w-[34rem] md:h-[34rem] rounded-full border-2 border-pink-300 opacity-25"></div>
                 </div>
 
                 <!-- Múltiples capas de brillo -->
@@ -1335,13 +1360,6 @@
 
         /* OPTIMIZACIONES MÓVILES */
         @media (max-width: 768px) {
-            /* Control de música más compacto en móvil */
-            #musicControl button {
-                width: 2.5rem;
-                height: 2.5rem;
-                font-size: 0.875rem;
-            }
-
             /* Mejorar número 50 en móvil */
             #portada h1 {
                 font-size: 18rem !important;
@@ -1394,12 +1412,6 @@
                 text-rendering: optimizeLegibility;
             }
 
-            /* Control de música aún más compacto */
-            #musicControl button {
-                width: 2.25rem;
-                height: 2.25rem;
-                font-size: 0.75rem;
-            }
         }
 
         .scroll-animate-left {
@@ -1442,6 +1454,251 @@
         .audio-bar.paused {
             animation: none;
             height: 20%;
+        }
+
+        /* === ESTILOS DEL BOTÓN DE VINILO === */
+        .music-vinyl-button {
+            position: relative;
+            filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.5));
+        }
+
+        /* Disco de vinilo giratorio */
+        .vinyl-disc {
+            transition: all 0.3s ease;
+        }
+
+        .music-vinyl-button:hover .vinyl-disc {
+            animation: vinyl-spin 2s linear infinite;
+        }
+
+        .music-vinyl-button.playing .vinyl-disc {
+            animation: vinyl-spin 3s linear infinite;
+        }
+
+        @keyframes vinyl-spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Etiqueta central que NO gira */
+        .vinyl-label {
+            animation: none !important;
+        }
+
+        /* Icono de nota musical con animación sutil */
+        .vinyl-icon {
+            transition: all 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .music-vinyl-button:hover .vinyl-icon {
+            opacity: 1;
+            text-shadow: 0 0 15px rgba(34, 211, 238, 0.8);
+        }
+
+        .music-vinyl-button.playing .vinyl-icon {
+            animation: note-bounce 1s ease-in-out infinite;
+        }
+
+        @keyframes note-bounce {
+            0%, 100% {
+                transform: translate(-50%, -50%) translateY(0px);
+            }
+            50% {
+                transform: translate(-50%, -50%) translateY(-3px);
+            }
+        }
+
+        /* Ondas de sonido animadas */
+        .sound-wave-ring {
+            border: 2px solid transparent;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .music-vinyl-button.playing .sound-wave-ring {
+            animation: sound-pulse 2s ease-out infinite;
+        }
+
+        .sound-wave-1 {
+            animation-delay: 0s;
+        }
+
+        .sound-wave-2 {
+            animation-delay: 0.4s;
+        }
+
+        .sound-wave-3 {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes sound-pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+                border-color: rgba(34, 211, 238, 0.8);
+            }
+            50% {
+                transform: scale(1.4);
+                opacity: 0.4;
+                border-color: rgba(147, 51, 234, 0.6);
+            }
+            100% {
+                transform: scale(1.8);
+                opacity: 0;
+                border-color: rgba(236, 72, 153, 0);
+            }
+        }
+
+        /* Efecto glow neón */
+        .neon-glow {
+            background: radial-gradient(circle, rgba(34, 211, 238, 0.3) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .music-vinyl-button:hover .neon-glow {
+            opacity: 0.6;
+        }
+
+        .music-vinyl-button.playing .neon-glow {
+            opacity: 1;
+            animation: neon-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes neon-pulse {
+            0%, 100% {
+                opacity: 0.6;
+                box-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+            }
+            50% {
+                opacity: 1;
+                box-shadow: 0 0 40px rgba(34, 211, 238, 0.8);
+            }
+        }
+
+        /* Anillo de llamada a la acción (pulsa constantemente) */
+        .call-to-action-ring {
+            border: 3px solid rgba(34, 211, 238, 0.6);
+            animation: cta-ring-pulse 2s ease-in-out infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .music-vinyl-button.playing .call-to-action-ring {
+            animation: none;
+            opacity: 0;
+        }
+
+        @keyframes cta-ring-pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+                border-color: rgba(34, 211, 238, 0.8);
+                box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.7);
+            }
+            50% {
+                transform: scale(1.15);
+                opacity: 0.7;
+                border-color: rgba(147, 51, 234, 0.6);
+                box-shadow: 0 0 20px 5px rgba(34, 211, 238, 0.3);
+            }
+        }
+
+        /* Efecto de brillo rotativo en el disco */
+        .shimmer-effect {
+            background: linear-gradient(
+                120deg,
+                transparent 0%,
+                transparent 45%,
+                rgba(34, 211, 238, 0.3) 50%,
+                transparent 55%,
+                transparent 100%
+            );
+            animation: shimmer-rotate 3s linear infinite;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .music-vinyl-button.playing .shimmer-effect {
+            animation: shimmer-rotate 1.5s linear infinite;
+        }
+
+        @keyframes shimmer-rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Indicador "Toca aquí" */
+        .tap-indicator {
+            animation: tap-fade-bounce 2s ease-in-out infinite;
+        }
+
+        .music-vinyl-button.playing ~ .tap-indicator,
+        .music-vinyl-button:hover ~ .tap-indicator {
+            opacity: 0 !important;
+            pointer-events: none;
+        }
+
+        @keyframes tap-fade-bounce {
+            0%, 100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            50% {
+                opacity: 0.7;
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Ajustes responsive para el botón de vinilo */
+        @media (max-width: 768px) {
+            .music-vinyl-button {
+                width: 4.5rem;
+                height: 4.5rem;
+            }
+
+            .vinyl-label {
+                width: 1.75rem;
+                height: 1.75rem;
+            }
+
+            .vinyl-icon {
+                font-size: 1.25rem;
+            }
+
+            .tap-indicator {
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .music-vinyl-button {
+                width: 4rem;
+                height: 4rem;
+            }
+
+            .vinyl-label {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            .vinyl-icon {
+                font-size: 1.125rem;
+            }
+
+            .tap-indicator {
+                font-size: 0.7rem;
+            }
         }
 
         /* 4. Pulso continuo para botones */
@@ -1677,25 +1934,6 @@
 
         window.addEventListener('load', createVisibleParticles);
 
-        // 4. SHIMMER EN EL NÚMERO 50
-        window.addEventListener('load', () => {
-            const numero50 = document.querySelector('#portada h1');
-            if (numero50) {
-                setInterval(() => {
-                    const shimmer = document.createElement('div');
-                    shimmer.className = 'shimmer-effect';
-                    shimmer.style.position = 'absolute';
-                    shimmer.style.top = '0';
-                    shimmer.style.left = '0';
-                    shimmer.style.width = '100%';
-                    shimmer.style.height = '100%';
-                    shimmer.style.pointerEvents = 'none';
-                    numero50.parentElement.style.position = 'relative';
-                    numero50.parentElement.appendChild(shimmer);
-                    setTimeout(() => shimmer.remove(), 3000);
-                }, 5000);
-            }
-        });
 
         // 5. EFECTO PARALLAX EN DECORACIONES
         function initParallax() {
@@ -1770,7 +2008,7 @@
             function toggleMusic() {
                 if (isPlaying) {
                     music.pause();
-                    toggleButton.textContent = '🎵';
+                    toggleButton.classList.remove('playing');
                     // Ocultar visualizador completamente
                     audioBars.forEach(bar => bar.classList.add('paused'));
                     audioVisualizer.style.display = 'none';
@@ -1778,7 +2016,7 @@
                     hideSongTooltip();
                 } else {
                     music.play();
-                    toggleButton.textContent = '⏸️';
+                    toggleButton.classList.add('playing');
                     // Mostrar y reanudar animación de barras
                     audioBars.forEach(bar => bar.classList.remove('paused'));
                     audioVisualizer.style.display = 'flex';
