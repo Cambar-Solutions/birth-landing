@@ -8,6 +8,21 @@ const hoursElement = document.getElementById('hours');
 const minutesElement = document.getElementById('minutes');
 const secondsElement = document.getElementById('seconds');
 
+// Variables para almacenar valores anteriores
+let prevDays = null;
+let prevHours = null;
+let prevMinutes = null;
+let prevSeconds = null;
+
+// Función para agregar efecto suave de cambio
+function addFlipEffect(element) {
+    const container = element.parentElement;
+    container.classList.add('flip');
+    setTimeout(() => {
+        container.classList.remove('flip');
+    }, 400);
+}
+
 function updateCountdown() {
     // Obtener la fecha y hora actual
     const now = new Date().getTime();
@@ -30,11 +45,30 @@ function updateCountdown() {
     // Formatear la salida para que siempre tenga dos dígitos (00)
     const formatTime = (time) => String(time).padStart(2, '0');
 
-    // Mostrar el resultado en los elementos
-    daysElement.innerHTML = formatTime(days);
-    hoursElement.innerHTML = formatTime(hours);
-    minutesElement.innerHTML = formatTime(minutes);
-    secondsElement.innerHTML = formatTime(seconds);
+    // Mostrar el resultado con efecto flip si el valor cambió
+    if (prevDays !== days) {
+        daysElement.innerHTML = formatTime(days);
+        if (prevDays !== null) addFlipEffect(daysElement);
+        prevDays = days;
+    }
+
+    if (prevHours !== hours) {
+        hoursElement.innerHTML = formatTime(hours);
+        if (prevHours !== null) addFlipEffect(hoursElement);
+        prevHours = hours;
+    }
+
+    if (prevMinutes !== minutes) {
+        minutesElement.innerHTML = formatTime(minutes);
+        if (prevMinutes !== null) addFlipEffect(minutesElement);
+        prevMinutes = minutes;
+    }
+
+    if (prevSeconds !== seconds) {
+        secondsElement.innerHTML = formatTime(seconds);
+        if (prevSeconds !== null) addFlipEffect(secondsElement);
+        prevSeconds = seconds;
+    }
 
     // Cuando la cuenta regresiva termina (opcional: mensaje de '¡Es hoy!')
     if (distance < 0) {
@@ -44,7 +78,7 @@ function updateCountdown() {
         minutesElement.innerHTML = "00";
         secondsElement.innerHTML = "00";
         // Aquí podrías agregar un mensaje de "¡Es la fiesta!"
-        document.getElementById('countdown').innerHTML = "<h2>¡Hoy es el gran día! 🎉</h2>";
+        document.getElementById('countdown').innerHTML = "<h2 class='text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 animate-pulse'>¡Hoy es el gran día! 🎉🎊✨</h2>";
     }
 }
 

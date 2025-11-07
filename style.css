@@ -40,11 +40,14 @@ h1, h2, h3 {
 }
 
 .logo-50 {
-    font-size: 15vw; /* Tamaño grande para móvil y escalable */
+    font-size: 18rem; /* Tamaño optimizado para móvil */
     color: var(--color-acento);
     letter-spacing: -5px;
     margin-bottom: -20px;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .subtitulo-cumple {

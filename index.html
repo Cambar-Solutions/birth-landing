@@ -6,10 +6,26 @@
     <title>¡Los 50 de Norma! | Invitación</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Control de música -->
-    <div id="musicControl" class="fixed bottom-4 right-4 z-50 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg border-2 border-pink-200 cursor-pointer flex items-center gap-2 transition-all hover:scale-105">
-        <button id="toggleMusic" class="text-2xl">🎵</button>
-        <span class="text-sm font-medium text-pink-600">La Bikina</span>
+    <!-- Control de música MINIMALISTA -->
+    <div id="musicControl" class="fixed bottom-3 right-3 z-50 group">
+        <button id="toggleMusic" class="w-12 h-12 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full shadow-lg flex items-center justify-center text-lg cursor-pointer transition-all hover:scale-110 hover:shadow-xl border-2 border-white/50">
+            🎵
+        </button>
+
+        <!-- Tooltip que aparece cuando la música está reproduciéndose -->
+        <div id="songTooltip" class="absolute bottom-full right-0 mb-2 opacity-0 transition-all duration-300 pointer-events-none transform translate-y-2">
+            <div class="bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-lg border border-pink-200 whitespace-nowrap">
+                <div class="flex items-center gap-2">
+                    <!-- Visualizador mini (oculto por defecto) -->
+                    <div class="flex items-end gap-0.5 h-3" id="audioVisualizer" style="display: none;">
+                        <div class="w-0.5 bg-pink-500 rounded-full audio-bar" style="animation-duration: 0.6s;"></div>
+                        <div class="w-0.5 bg-pink-500 rounded-full audio-bar" style="animation-duration: 0.8s; animation-delay: 0.1s;"></div>
+                        <div class="w-0.5 bg-pink-500 rounded-full audio-bar" style="animation-duration: 0.7s; animation-delay: 0.2s;"></div>
+                    </div>
+                    <span class="text-xs font-medium text-pink-600">La Bikina</span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Audio element -->
@@ -39,8 +55,8 @@
     <!-- Sección Portada -->
     <section id="portada" class="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-12 bg-gradient-to-br from-pink-50 via-white to-purple-50">
 
-        <!-- Decoración esquina superior izquierda: flores doradas -->
-        <div class="absolute top-0 left-0 w-48 md:w-80 opacity-70">
+        <!-- Decoración esquina superior izquierda: flores doradas CON PARALLAX -->
+        <div class="absolute top-0 left-0 w-48 md:w-80 opacity-70 parallax-layer" data-speed="0.3">
             <svg viewBox="0 0 200 200" class="text-yellow-600">
                 <path d="M10,80 Q30,20 80,10 Q60,40 50,60 Q30,50 10,80" fill="currentColor" opacity="0.3"/>
                 <circle cx="30" cy="40" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -48,8 +64,8 @@
             </svg>
         </div>
 
-        <!-- Bola disco superior centro -->
-        <div class="absolute top-8 md:top-12 left-1/2 -translate-x-1/2 w-24 md:w-32 animate-spin-slow">
+        <!-- Bola disco superior centro CON PARALLAX -->
+        <div class="absolute top-8 md:top-12 left-1/2 -translate-x-1/2 w-24 md:w-32 animate-spin-slow parallax-layer" data-speed="0.5">
             <div class="relative w-full h-full">
                 <div class="absolute inset-0 rounded-full bg-gradient-to-br from-yellow-400 via-yellow-600 to-yellow-700 shadow-2xl"></div>
                 <div class="absolute inset-2 rounded-full bg-gradient-to-tl from-yellow-300 to-yellow-500 opacity-60"></div>
@@ -62,32 +78,48 @@
             </div>
         </div>
 
-        <!-- Globos rosados esquina derecha -->
-        <div class="absolute top-20 md:top-32 right-4 md:right-12 flex flex-col gap-4 animate-float">
+        <!-- Globos rosados esquina derecha CON PARALLAX -->
+        <div class="absolute top-20 md:top-32 right-4 md:right-12 flex flex-col gap-4 animate-float parallax-layer" data-speed="0.4">
             <div class="w-12 h-14 md:w-16 md:h-20 bg-gradient-to-br from-pink-200 to-pink-300 rounded-full shadow-lg opacity-80"></div>
             <div class="w-10 h-12 md:w-14 md:h-16 bg-gradient-to-br from-white to-pink-100 rounded-full shadow-lg opacity-70 ml-4"></div>
         </div>
 
         <!-- Contenido central -->
         <div class="relative z-10 text-center max-w-4xl mx-auto w-full flex flex-col items-center">
-            <!-- Número 50 estilo globo dorado mejorado -->
-            <div class="relative inline-block mb-6 group/number">
+            <!-- Número 50 MEGA MEJORADO -->
+            <div class="relative inline-block mb-6 group/number" style="perspective: 1000px;">
+                <!-- Círculo de resplandor animado de fondo -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-[24rem] h-[24rem] sm:w-[28rem] sm:h-[28rem] md:w-[36rem] md:h-[36rem] rounded-full bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 opacity-25 blur-3xl animate-pulse"></div>
+                </div>
+
+                <!-- Anillos de brillo giratorios -->
+                <div class="absolute inset-0 flex items-center justify-center animate-spin-slow" style="animation-duration: 20s;">
+                    <div class="w-[22rem] h-[22rem] sm:w-[26rem] sm:h-[26rem] md:w-[32rem] md:h-[32rem] rounded-full border-4 border-yellow-300 opacity-35"></div>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center animate-spin-slow" style="animation-duration: 15s; animation-direction: reverse;">
+                    <div class="w-[23rem] h-[23rem] sm:w-[27rem] sm:h-[27rem] md:w-[34rem] md:h-[34rem] rounded-full border-2 border-pink-300 opacity-25"></div>
+                </div>
+
                 <!-- Múltiples capas de brillo -->
-                <div class="absolute inset-0 text-[8rem] md:text-[16rem] font-bold font-playfair text-yellow-300 opacity-20 blur-2xl animate-pulse">50</div>
-                <div class="absolute inset-0 text-[8rem] md:text-[16rem] font-bold font-playfair text-pink-400 opacity-15 blur-xl animate-pulse" style="animation-delay: 0.5s;">50</div>
+                <div class="absolute inset-0 text-[18rem] sm:text-[20rem] md:text-[28rem] font-bold font-playfair opacity-30 blur-3xl animate-pulse" style="color: rgba(253, 224, 71, 0.6); -webkit-text-stroke: 0px;">50</div>
+                <div class="absolute inset-0 text-[18rem] sm:text-[20rem] md:text-[28rem] font-bold font-playfair opacity-25 blur-2xl animate-pulse" style="animation-delay: 0.5s; color: rgba(244, 114, 182, 0.6); -webkit-text-stroke: 0px;">50</div>
+                <div class="absolute inset-0 text-[18rem] sm:text-[20rem] md:text-[28rem] font-bold font-playfair opacity-20 blur-xl animate-pulse" style="animation-delay: 1s; color: rgba(192, 132, 252, 0.6); -webkit-text-stroke: 0px;">50</div>
 
-                <!-- Número principal con efecto 3D -->
-                <h1 class="text-[8rem] md:text-[16rem] font-bold font-playfair text-transparent bg-clip-text bg-gradient-to-b from-yellow-300 via-yellow-500 to-yellow-700 drop-shadow-2xl relative z-10 transform group-hover/number:scale-105 transition-transform duration-300" style="text-shadow: 4px 4px 8px rgba(0,0,0,0.2), 0 0 20px rgba(251, 191, 36, 0.5);">50</h1>
-
-                <!-- Estrellas decorativas alrededor del 50 -->
-                <div class="absolute -top-4 md:-top-8 -left-4 md:-left-8 text-2xl md:text-6xl animate-spin-slow">⭐</div>
-                <div class="absolute -top-4 md:-top-8 -right-4 md:-right-8 text-2xl md:text-6xl animate-spin-slow" style="animation-delay: 1s; animation-direction: reverse;">✨</div>
-                <div class="absolute -bottom-4 md:-bottom-8 -left-4 md:-left-8 text-xl md:text-5xl animate-bounce-slow">🌟</div>
-                <div class="absolute -bottom-4 md:-bottom-8 -right-4 md:-right-8 text-xl md:text-5xl animate-bounce-slow" style="animation-delay: 0.5s;">💫</div>
+                <!-- Número principal SIN efecto 3D -->
+                <h1 class="text-[18rem] sm:text-[20rem] md:text-[28rem] font-bold font-playfair relative z-10 transform group-hover/number:scale-110 transition-all duration-500 animate-float"
+                    style="
+                        background: linear-gradient(to bottom, rgb(253, 224, 71), rgb(234, 179, 8), rgb(161, 98, 7));
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        color: transparent;
+                        filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)) drop-shadow(0 0 40px rgba(251, 191, 36, 0.6)) drop-shadow(0 0 60px rgba(236, 72, 153, 0.4));
+                    ">50</h1>
             </div>
 
             <!-- Título Cumpleaños mejorado -->
-            <div class="relative inline-block mb-8 w-full">
+            <div class="relative inline-block mb-8 w-full scroll-animate">
                 <div class="absolute inset-0 bg-gradient-to-r from-pink-400 to-purple-400 blur-lg opacity-30"></div>
                 <p class="relative text-3xl md:text-6xl font-parisienne text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-pink-600 to-purple-600 drop-shadow-lg">
                     Cumpleaños
@@ -95,7 +127,7 @@
             </div>
 
             <!-- Nombre mejorado -->
-            <div class="relative inline-block mb-12 w-full px-4">
+            <div class="relative inline-block mb-12 w-full px-4 scroll-animate" style="transition-delay: 0.1s;">
                 <div class="absolute inset-0 bg-gradient-to-r from-purple-300 to-pink-300 blur-md opacity-20"></div>
                 <h2 class="relative text-2xl md:text-5xl font-playfair text-gray-800 font-bold">
                     Norma Sotelo Pérez
@@ -109,7 +141,7 @@
             </div>
 
             <!-- Tarjeta de información mejorada -->
-            <div class="relative w-full max-w-2xl px-4 flex justify-center">
+            <div class="relative w-full max-w-2xl px-4 flex justify-center scroll-animate" style="transition-delay: 0.2s;">
                 <div class="relative inline-block group/info w-full">
                     <div class="absolute inset-0 bg-gradient-to-br from-pink-400 via-purple-400 to-pink-400 rounded-2xl blur-lg opacity-30 group-hover/info:opacity-50 transition-opacity animate-pulse-glow"></div>
                     <div class="relative space-y-3 text-base md:text-xl bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border-4 border-pink-200 transform group-hover/info:scale-105 transition-all duration-300 w-full">
@@ -130,8 +162,35 @@
                 </div>
             </div>
 
+            <!-- Tarjeta de advertencia sorpresa -->
+            <div class="sorpresa-card max-w-3xl mx-auto mb-8 px-4 mt-8 scroll-animate" role="status" aria-label="Fiesta sorpresa - por favor no decirle a Norma">
+                <div class="relative bg-white/95 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-2xl border-4 border-pink-300">
+                    <div class="sorpresa-inner flex items-center justify-center gap-4 md:gap-6">
+                        <span class="text-4xl md:text-5xl animate-bounce-slow">⚠️</span>
+                        <div class="text-center">
+                            <div class="text-lg md:text-3xl font-bold text-pink-600">ATENCIÓN </div>
+                            <div class="sorpresa-text text-base md:text-2xl text-gray-700 font-semibold mt-2">Esta fiesta es sorpresa, favor de no mencionarle nada a Normita.</div>
+                        </div>
+                        <span class="text-4xl md:text-5xl animate-bounce-slow">⚠️</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta de código de vestimenta -->
+            <div class="sorpresa-card max-w-3xl mx-auto mb-8 px-4 scroll-animate" role="status" aria-label="Código de vestimenta">
+                <div class="relative bg-white/95 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-2xl border-4 border-pink-300">
+                    <div class="sorpresa-inner flex items-center justify-center gap-4 md:gap-6">
+                        <span class="text-4xl md:text-5xl animate-bounce-slow">👚</span>
+                        <div class="text-center">
+                            <div class="text-base md:text-2xl font-bold text-pink-600">Pedimos portar algo rosa: prenda, moño, labial, gorra, accesorio... ¡Es color favorito de Normita! 💕</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
             <!-- Mensaje de scroll mejorado -->
-            <div class="mt-12 flex flex-col items-center gap-4 w-full px-4">
+            <div class="mt-12 flex flex-col items-center gap-4 w-full px-4 scroll-animate" style="transition-delay: 0.3s;">
                 <div class="relative inline-block w-full max-w-md">
                     <div class="absolute inset-0 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 rounded-full blur-lg opacity-50 animate-pulse"></div>
                     <div class="relative bg-white/90 backdrop-blur-sm px-6 md:px-8 py-3 md:py-4 rounded-full shadow-2xl border-2 border-pink-300 transform hover:scale-105 transition-all">
@@ -194,7 +253,7 @@
     </section>
 
     <!-- Sección Bienvenida -->
-    <section id="bienvenida" class="min-h-screen flex items-center justify-center px-4 py-16 md:py-24 relative overflow-hidden">
+    <section id="bienvenida" class="min-h-screen flex items-center justify-center px-4 py-16 md:py-24 relative overflow-hidden scroll-animate">
         <!-- Efectos de fondo simplificados -->
         <div class="absolute inset-0 pointer-events-none">
             <!-- Corazones flotantes -->
@@ -204,7 +263,7 @@
         </div>
 
         <div class="max-w-4xl mx-auto text-center relative z-10 px-4 w-full flex justify-center">
-            <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-12 transform hover:scale-105 transition-all duration-300 border-4 border-pink-200 relative group w-full max-w-2xl">
+            <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-12 transform hover:scale-105 transition-all duration-300 border-4 border-pink-200 relative group w-full max-w-2xl scroll-animate">
                 <div class="relative inline-block mb-8">
                     <!-- Marco decorativo con efecto de brillo -->
                     <div class="absolute -inset-4 bg-gradient-to-r from-pink-300 via-pink-200 to-pink-300 rounded-[2rem] opacity-75" style="filter: blur(10px);"></div>
@@ -236,39 +295,39 @@
             </div>
         </div>
     </section>
-<section id="itinerario" class="px-4 py-12 sm:py-16 bg-pink-50/80 backdrop-blur-sm relative">
+<section id="itinerario" class="px-4 py-12 sm:py-16 bg-pink-50/80 backdrop-blur-sm relative scroll-animate">
     <div class="container mx-auto text-center z-10">
       <h3 class="relative text-2xl md:text-5xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-purple-700 mb-4 px-4">
     Itinerario del Día
                 </h3>
-        <div class="max-w-xl mx-auto space-y-6 animate-slide-up p-4 bg-white shadow-xl rounded-xl border border-pink-100">
+        <div class="max-w-xl mx-auto space-y-6 animate-slide-up p-4 bg-white shadow-xl rounded-xl border border-pink-100 scroll-animate">
 
-            <div class="text-left border-l-4 border-pink-500 pl-4 py-1 transition duration-300 hover:bg-purple-50/50 rounded-r-lg">
+            <div class="text-left border-l-4 border-pink-500 pl-4 py-1 transition duration-300 hover:bg-purple-50/50 rounded-r-lg scroll-animate" style="transition-delay: 0.1s;">
                 <p class="text-lg font-bold text-pink-600 mb-1">3:30 pm</p>
                 <p class="text-lg font-semibold text-gray-800">¡Llegada y Bienvenida a la <span class="text-purple-700">NormisFest</span>! 🎉</p>
             </div>
 
-            <div class="text-left border-l-4 border-pink-500 pl-4 py-1 transition duration-300 hover:bg-purple-50/50 rounded-r-lg">
+            <div class="text-left border-l-4 border-pink-500 pl-4 py-1 transition duration-300 hover:bg-purple-50/50 rounded-r-lg scroll-animate" style="transition-delay: 0.2s;">
                 <p class="text-lg font-bold text-pink-600 mb-1">4:00 - 5:00 pm</p>
                 <p class="text-lg font-semibold text-gray-800">Hora de la Comida 🍽️</p>
             </div>
 
-            <div class="text-left border-l-4 border-pink-500 pl-4 py-1 transition duration-300 hover:bg-purple-50/50 rounded-r-lg">
+            <div class="text-left border-l-4 border-pink-500 pl-4 py-1 transition duration-300 hover:bg-purple-50/50 rounded-r-lg scroll-animate" style="transition-delay: 0.3s;">
                 <p class="text-lg font-bold text-pink-600 mb-1">5:00 - 6:00 pm</p>
                 <p class="text-lg font-semibold text-gray-800">Agradable Sorpresa Musical 🎺</p>
             </div>
 
-            <div class="text-left border-l-4 border-pink-500 pl-4 py-1 transition duration-300 hover:bg-purple-50/50 rounded-r-lg">
+            <div class="text-left border-l-4 border-pink-500 pl-4 py-1 transition duration-300 hover:bg-purple-50/50 rounded-r-lg scroll-animate" style="transition-delay: 0.4s;">
                 <p class="text-lg font-bold text-pink-600 mb-1">6:00 pm</p>
                 <p class="text-lg font-semibold text-gray-800">¡Momento del Pastel! 🎂</p>
             </div>
 
-            <div class="text-left border-l-4 border-pink-500 pl-4 py-1 transition duration-300 hover:bg-purple-50/50 rounded-r-lg">
+            <div class="text-left border-l-4 border-pink-500 pl-4 py-1 transition duration-300 hover:bg-purple-50/50 rounded-r-lg scroll-animate" style="transition-delay: 0.5s;">
                 <p class="text-lg font-bold text-pink-600 mb-1">7:00 - 9:00 pm</p>
                 <p class="text-lg font-semibold text-gray-800">Una Sorpresa Musical les Espera 🎶</p>
             </div>
 
-            <div class="text-left border-l-4 border-pink-500 pl-4 py-1 transition duration-300 hover:bg-purple-50/50 rounded-r-lg">
+            <div class="text-left border-l-4 border-pink-500 pl-4 py-1 transition duration-300 hover:bg-purple-50/50 rounded-r-lg scroll-animate" style="transition-delay: 0.6s;">
                 <p class="text-lg font-bold text-pink-600 mb-1">10:00 - 11:00 pm</p>
                 <p class="text-lg font-semibold text-gray-800">Tornafiesta 🍲</p>
             </div>
@@ -277,37 +336,37 @@
     </div>
     
 </section>
-<div class="sorpresa-card max-w-xl mx-auto mb-6" role="status" aria-label="Fiesta sorpresa - por favor no decirle a Norma">
-                  <div class="relative bg-white/95 backdrop-blur-sm rounded-3xl p-4 md:p-5 shadow-2xl border-4 border-pink-200">
-                      <div class="sorpresa-inner flex items-center justify-center gap-4">
-                    <span class="text-2xl animate-bounce-slow">👚</span>
-                          <div class="text-left">
-                              <div class="text-sm md:text-base font-semibold text-pink-600">Pedimos llevar una prenda de color rosa, es el color favorito de Normita. </div>
+<div class="sorpresa-card max-w-3xl mx-auto mb-8 px-4" role="status" aria-label="Código de vestimenta">
+                  <div class="relative bg-white/95 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-2xl border-4 border-pink-300">
+                      <div class="sorpresa-inner flex items-center justify-center gap-4 md:gap-6">
+                    <span class="text-4xl md:text-5xl animate-bounce-slow">👚</span>
+                          <div class="text-center">
+                              <div class="text-base md:text-2xl font-bold text-pink-600">Pedimos portar algo rosa: prenda, moño, labial, gorra, accesorio... ¡Es color favorito de Normita! 💕</div>
                           </div>
-                
+
                       </div>
                   </div>
               </div>
 
 
     <!-- Sección Cuenta Regresiva -->
-    <section id="cuenta-regresiva" class="min-h-screen flex items-center justify-center px-4 py-16 bg-gradient-to-br from-purple-100 to-pink-100 relative overflow-hidden">
-    
+    <section id="cuenta-regresiva" class="flex items-center justify-center px-4 py-6 bg-gradient-to-br from-purple-100 to-pink-100 relative overflow-hidden">
+
         <!-- Efectos de fondo para el reloj -->
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-pink-300 rounded-full opacity-20 blur-3xl animate-pulse"></div>
             <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-300 rounded-full opacity-20 blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
         </div>
-        
+
 
         <div class="max-w-6xl mx-auto text-center w-full relative z-10 px-4">
             <!-- Título mejorado -->
-            <div class="relative inline-block mb-12 w-full">
+            <div class="relative inline-block mb-4 w-full scroll-animate">
                 <div class="absolute inset-0 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 blur-xl opacity-40 animate-pulse"></div>
-                <h3 class="relative text-2xl md:text-5xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-purple-700 mb-4 px-4">
+                <h3 class="relative text-2xl md:text-5xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-purple-700 mb-2 px-4">
                     Tiempo que falta para el cumple
                 </h3>
-                <div class="flex items-center justify-center gap-2 mt-4">
+                <div class="flex items-center justify-center gap-2 mt-2">
                     <div class="w-10 md:w-12 h-1 bg-gradient-to-r from-transparent via-pink-500 to-transparent rounded-full"></div>
                     <span class="text-2xl animate-bounce-slow">⏰</span>
 
@@ -318,48 +377,56 @@
 
             <div id="countdown" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
                 <!-- Días -->
-                <div class="countdown-box group">
+                <div class="countdown-box group scroll-animate">
                     <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-pink-600 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity animate-pulse-glow"></div>
                     <div class="relative bg-white rounded-2xl shadow-2xl p-6 md:p-8 transform group-hover:scale-110 transition-all duration-300 border-4 border-pink-200">
                         <div class="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full shadow-lg animate-bounce-slow"></div>
-                        <span id="days" class="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-pink-700 block animate-number-pulse">00</span>
+                        <div class="flip-container">
+                            <span id="days" class="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-pink-700 block">00</span>
+                        </div>
                         <p class="text-sm md:text-lg text-gray-700 mt-2 uppercase tracking-wide font-semibold">Días</p>
                     </div>
                 </div>
 
                 <!-- Horas -->
-                <div class="countdown-box group">
+                <div class="countdown-box group scroll-animate" style="transition-delay: 0.1s;">
                     <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity animate-pulse-glow" style="animation-delay: 0.5s;"></div>
                     <div class="relative bg-white rounded-2xl shadow-2xl p-6 md:p-8 transform group-hover:scale-110 transition-all duration-300 border-4 border-purple-200">
                         <div class="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full shadow-lg animate-bounce-slow" style="animation-delay: 0.2s;"></div>
-                        <span id="hours" class="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-purple-700 block animate-number-pulse">00</span>
+                        <div class="flip-container">
+                            <span id="hours" class="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-purple-700 block">00</span>
+                        </div>
                         <p class="text-sm md:text-lg text-gray-700 mt-2 uppercase tracking-wide font-semibold">Horas</p>
                     </div>
                 </div>
 
                 <!-- Minutos -->
-                <div class="countdown-box group">
+                <div class="countdown-box group scroll-animate" style="transition-delay: 0.2s;">
                     <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-pink-600 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity animate-pulse-glow" style="animation-delay: 1s;"></div>
                     <div class="relative bg-white rounded-2xl shadow-2xl p-6 md:p-8 transform group-hover:scale-110 transition-all duration-300 border-4 border-pink-200">
                         <div class="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full shadow-lg animate-bounce-slow" style="animation-delay: 0.4s;"></div>
-                        <span id="minutes" class="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-pink-700 block animate-number-pulse">00</span>
+                        <div class="flip-container">
+                            <span id="minutes" class="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-pink-700 block">00</span>
+                        </div>
                         <p class="text-sm md:text-lg text-gray-700 mt-2 uppercase tracking-wide font-semibold">Minutos</p>
                     </div>
                 </div>
 
                 <!-- Segundos -->
-                <div class="countdown-box group">
+                <div class="countdown-box group scroll-animate" style="transition-delay: 0.3s;">
                     <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity animate-pulse-glow" style="animation-delay: 1.5s;"></div>
                     <div class="relative bg-white rounded-2xl shadow-2xl p-6 md:p-8 transform group-hover:scale-110 transition-all duration-300 border-4 border-purple-200">
                         <div class="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full shadow-lg animate-bounce-slow" style="animation-delay: 0.6s;"></div>
-                        <span id="seconds" class="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-purple-700 block animate-number-pulse">00</span>
+                        <div class="flip-container">
+                            <span id="seconds" class="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-purple-700 block">00</span>
+                        </div>
                         <p class="text-sm md:text-lg text-gray-700 mt-2 uppercase tracking-wide font-semibold">Segundos</p>
                     </div>
                 </div>
             </div>
 
             <!-- Mensaje adicional -->
-            <div class="mt-12 animate-fade-in w-full">
+            <div class="mt-4 animate-fade-in w-full">
                 <p class="text-lg md:text-2xl font-parisienne text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">
                     ¡La cuenta regresiva ha comenzado! ✨
                 </p>
@@ -369,15 +436,15 @@
 
     <!-- Sección Galería -->
      <!-- Banner distintivo: Fiesta Sorpresa (ubicado sobre el itinerario) dentro de tarjeta -->
-              <div class="sorpresa-card max-w-xl mx-auto mb-6" role="status" aria-label="Fiesta sorpresa - por favor no decirle a Norma">
-                  <div class="relative bg-white/95 backdrop-blur-sm rounded-3xl p-4 md:p-5 shadow-2xl border-4 border-pink-200">
-                      <div class="sorpresa-inner flex items-center justify-center gap-4">
-                    <span class="text-2xl animate-bounce-slow">⚠️</span>
-                          <div class="text-left">
-                              <div class="text-sm md:text-base font-semibold text-pink-600">ATENCIÓN </div>
-                              <div class="sorpresa-text text-xs md:text-sm text-gray-700">Esta fiesta es sorpresa, favor de no mencionarle nada a Normita.</div>
+              <div class="sorpresa-card max-w-3xl mx-auto mb-8 px-4" role="status" aria-label="Fiesta sorpresa - por favor no decirle a Norma">
+                  <div class="relative bg-white/95 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-2xl border-4 border-pink-300">
+                      <div class="sorpresa-inner flex items-center justify-center gap-4 md:gap-6">
+                    <span class="text-4xl md:text-5xl animate-bounce-slow">⚠️</span>
+                          <div class="text-center">
+                              <div class="text-lg md:text-3xl font-bold text-pink-600">ATENCIÓN </div>
+                              <div class="sorpresa-text text-base md:text-2xl text-gray-700 font-semibold mt-2">Esta fiesta es sorpresa, favor de no mencionarle nada a Normita.</div>
                           </div>
-                    <span class="text-2xl animate-bounce-slow">⚠️</span>
+                    <span class="text-4xl md:text-5xl animate-bounce-slow">⚠️</span>
                       </div>
                   </div>
               </div>
@@ -392,7 +459,7 @@
 
         <div class="max-w-7xl mx-auto w-full relative z-10">
             <!-- Título mejorado -->
-            <div class="relative inline-block mb-12 w-full text-center">
+            <div class="relative inline-block mb-12 w-full text-center scroll-animate">
                 <div class="absolute inset-0 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 blur-xl opacity-30"></div>
                 <h3 class="relative text-3xl md:text-5xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-purple-700 mb-4">
                     Sesión de fotos
@@ -791,7 +858,7 @@
             </div>
 
             <!-- Mensaje mejorado -->
-            <div class="text-center mt-8 md:hidden">
+            <div class="text-center mt-8 md:hidden scroll-animate" style="transition-delay: 0.4s;">
                 <div class="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border-2 border-pink-200">
                     <p class="text-gray-700 font-semibold">Sigue bajando para ver la ubicación </p>
                     <span class="text-2xl animate-bounce-slow">📍</span>
@@ -802,7 +869,7 @@
     </section>
 
     <!-- Sección Ubicación -->
-    <section id="ubicacion" class="min-h-screen flex items-center justify-center px-4 py-16 bg-gradient-to-br from-purple-100 to-pink-100 relative overflow-hidden">
+    <section id="ubicacion" class="min-h-screen flex items-center justify-center px-4 py-16 bg-gradient-to-br from-purple-100 to-pink-100 relative overflow-hidden scroll-animate">
         
         <!-- Efectos de fondo -->
         <div class="absolute inset-0 pointer-events-none">
@@ -816,7 +883,7 @@
 
         <div class="max-w-4xl mx-auto w-full relative z-10">
             <!-- Título mejorado -->
-            <div class="relative inline-block mb-8 w-full text-center">
+            <div class="relative inline-block mb-8 w-full text-center scroll-animate">
                 <div class="absolute inset-0 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 blur-xl opacity-30 animate-pulse"></div>
                 <h3 class="relative text-3xl md:text-5xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-purple-700 mb-4">
                     Ubicación de la fiesta
@@ -828,7 +895,7 @@
                 </div>
             </div>
 
-            <div class="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-6 md:p-10 relative group border-4 border-transparent hover:border-pink-200 transition-all duration-300">
+            <div class="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-6 md:p-10 relative group border-4 border-transparent hover:border-pink-200 transition-all duration-300 scroll-animate" style="transition-delay: 0.2s;">
                 <!-- Brillo detrás de la tarjeta -->
                 <div class="absolute inset-0 bg-gradient-to-br from-pink-300 via-purple-300 to-pink-300 rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-300 -z-10"></div>
 
@@ -863,7 +930,7 @@
                     <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover/button:opacity-75 transition-opacity animate-pulse-glow"></div>
                     <a href="https://www.google.com/maps/search/?api=1&query=M.+Avila+Camacho+46+Benito+Juarez+Xochitepec+Morelos+Mexico"
                        target="_blank"
-                       class="relative block w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white text-center py-5 rounded-xl font-bold text-lg hover:from-pink-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-2xl border-2 border-white flex items-center justify-center gap-3">
+                       class="pulse-button relative block w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white text-center py-5 rounded-xl font-bold text-lg hover:from-pink-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-2xl border-2 border-white flex items-center justify-center gap-3">
                         <span class="text-2xl">🗺️</span>
                         Abrir en Google Maps
                         <span class="text-2xl">📱</span>
@@ -887,15 +954,15 @@
         
     </section>
     <!-- Banner distintivo: Fiesta Sorpresa (ubicado sobre el itinerario) dentro de tarjeta -->
-              <div class="sorpresa-card max-w-xl mx-auto mb-6" role="status" aria-label="Fiesta sorpresa - por favor no decirle a Norma">
-                  <div class="relative bg-white/95 backdrop-blur-sm rounded-3xl p-4 md:p-5 shadow-2xl border-4 border-pink-200">
-                      <div class="sorpresa-inner flex items-center justify-center gap-4">
-                    <span class="text-2xl animate-bounce-slow">⚠️</span>
-                          <div class="text-left">
-                              <div class="text-sm md:text-base font-semibold text-pink-600">ATENCIÓN </div>
-                              <div class="sorpresa-text text-xs md:text-sm text-gray-700">Esta fiesta es sorpresa, favor de no mencionarle nada a Normita.</div>
+              <div class="sorpresa-card max-w-3xl mx-auto mb-8 px-4" role="status" aria-label="Fiesta sorpresa - por favor no decirle a Norma">
+                  <div class="relative bg-white/95 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-2xl border-4 border-pink-300">
+                      <div class="sorpresa-inner flex items-center justify-center gap-4 md:gap-6">
+                    <span class="text-4xl md:text-5xl animate-bounce-slow">⚠️</span>
+                          <div class="text-center">
+                              <div class="text-lg md:text-3xl font-bold text-pink-600">ATENCIÓN </div>
+                              <div class="sorpresa-text text-base md:text-2xl text-gray-700 font-semibold mt-2">Esta fiesta es sorpresa, favor de no mencionarle nada a Normita.</div>
                           </div>
-                    <span class="text-2xl animate-bounce-slow">⚠️</span>
+                    <span class="text-4xl md:text-5xl animate-bounce-slow">⚠️</span>
                       </div>
                   </div>
               </div>
@@ -915,10 +982,46 @@
 
         body {
             scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
         }
 
         .section, section {
             scroll-snap-align: start;
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+        }
+
+        /* Transiciones suaves entre secciones */
+        section {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section.section-entering {
+            animation: sectionFadeIn 0.8s ease-out;
+        }
+
+        @keyframes sectionFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Efecto de transición de color de fondo entre secciones */
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.1), transparent);
+            pointer-events: none;
+            z-index: 1;
         }
 
         @keyframes float {
@@ -1011,6 +1114,35 @@
         /* Animaciones para el reloj de cuenta regresiva */
         .countdown-box {
             position: relative;
+        }
+
+        /* Efecto suave para números de cuenta regresiva */
+        .flip-container {
+            display: inline-block;
+        }
+
+        .flip-container span {
+            display: inline-block;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .flip-container.flip span {
+            animation: numberChange 0.4s ease-in-out;
+        }
+
+        @keyframes numberChange {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         @keyframes pulse-glow {
@@ -1108,6 +1240,262 @@
 
         .fade-cascade-4 {
             animation: fade-in 0.6s ease-out 0.7s both;
+        }
+
+        /* Animaciones nuevas */
+
+        /* 1. Confeti */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: #f0f;
+            position: fixed;
+            top: -10px;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* 2. Shimmer effect para el 50 */
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .shimmer-effect {
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.8) 50%,
+                transparent 100%
+            );
+            background-size: 1000px 100%;
+            animation: shimmer 3s infinite;
+        }
+
+        /* 3. Animaciones de scroll */
+        .scroll-animate {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hacer que los elementos de portada sean visibles desde el inicio */
+        #portada .scroll-animate {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        /* Eliminar fondo blanco del número 50 - FORZADO */
+        #portada h1 {
+            background-color: transparent !important;
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            background-image: linear-gradient(to bottom, rgb(253, 224, 71), rgb(234, 179, 8), rgb(161, 98, 7)) !important;
+        }
+
+        /* Asegurar que el contenedor del 50 no tenga fondo blanco */
+        .group\/number {
+            background: transparent !important;
+        }
+
+        /* Forzar transparencia en todos los elementos relacionados al 50 */
+        #portada .group\/number,
+        #portada .group\/number *,
+        #portada .group\/number::before,
+        #portada .group\/number::after {
+            background-color: transparent !important;
+        }
+
+        /* Remover cualquier fondo blanco que pueda aparecer */
+        .text-transparent {
+            background-color: transparent !important;
+        }
+
+        /* OPTIMIZACIONES MÓVILES */
+        @media (max-width: 768px) {
+            /* Control de música más compacto en móvil */
+            #musicControl button {
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 0.875rem;
+            }
+
+            /* Mejorar número 50 en móvil */
+            #portada h1 {
+                font-size: 18rem !important;
+                text-rendering: optimizeLegibility;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            /* Ajustar capas de brillo en móvil */
+            #portada .group\/number > div[class*="text-"] {
+                font-size: 18rem !important;
+                text-rendering: optimizeLegibility;
+            }
+
+            /* Tarjetas más compactas */
+            .scroll-animate {
+                padding: 1rem;
+            }
+
+            /* Espaciado mejorado */
+            section {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+
+            /* Mejorar visibilidad de texto en móvil */
+            .text-base {
+                font-size: 0.95rem;
+            }
+
+            /* Botones más grandes y fáciles de tocar */
+            button {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+
+        /* Optimización para pantallas muy pequeñas */
+        @media (max-width: 480px) {
+            #portada h1 {
+                font-size: 14rem !important;
+                text-rendering: optimizeLegibility;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            /* Ajustar capas de brillo en móviles pequeños */
+            #portada .group\/number > div[class*="text-"] {
+                font-size: 14rem !important;
+                text-rendering: optimizeLegibility;
+            }
+
+            /* Control de música aún más compacto */
+            #musicControl button {
+                width: 2.25rem;
+                height: 2.25rem;
+                font-size: 0.75rem;
+            }
+        }
+
+        .scroll-animate-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-animate-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scroll-animate-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-animate-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Barras de audio visualizador */
+        .audio-bar {
+            height: 100%;
+            animation: audio-bounce 0.6s ease-in-out infinite alternate;
+        }
+
+        @keyframes audio-bounce {
+            0% {
+                height: 20%;
+            }
+            100% {
+                height: 100%;
+            }
+        }
+
+        .audio-bar.paused {
+            animation: none;
+            height: 20%;
+        }
+
+        /* 4. Pulso continuo para botones */
+        @keyframes pulse-button {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.7);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(236, 72, 153, 0);
+            }
+        }
+
+        .pulse-button {
+            animation: pulse-button 2s infinite;
+        }
+
+        /* 5. Partículas más visibles */
+        .particle-visible {
+            position: fixed;
+            pointer-events: none;
+            z-index: 100;
+            font-size: 24px;
+            animation: particle-float-visible 8s ease-in-out infinite;
+        }
+
+        @keyframes particle-float-visible {
+            0%, 100% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 0.7;
+            }
+            25% {
+                transform: translateY(-30px) translateX(20px) rotate(90deg);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-60px) translateX(-20px) rotate(180deg);
+                opacity: 0.7;
+            }
+            75% {
+                transform: translateY(-30px) translateX(20px) rotate(270deg);
+                opacity: 1;
+            }
+        }
+
+        /* 6. Zoom en galería */
+        .gallery-item {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:active {
+            transform: scale(0.95);
         }
     </style>
 
@@ -1226,26 +1614,176 @@
 
         // Actualizar sección actual al hacer scroll
         window.addEventListener('scroll', updateCurrentSection, { passive: true });
+        // ============ NUEVAS ANIMACIONES ============
+
+        // 1. CONFETI AL CARGAR LA PÁGINA
+        function createConfetti() {
+            const colors = ['#ff6b9d', '#c44569', '#ffa502', '#ffd32a', '#a29bfe', '#fd79a8'];
+            for (let i = 0; i < 100; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * window.innerWidth + 'px';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.width = (Math.random() * 10 + 5) + 'px';
+                    confetti.style.height = (Math.random() * 10 + 5) + 'px';
+                    confetti.style.animation = `confetti-fall ${Math.random() * 3 + 2}s linear`;
+                    confetti.style.animationDelay = (Math.random() * 2) + 's';
+                    document.body.appendChild(confetti);
+
+                    setTimeout(() => confetti.remove(), 5000);
+                }, i * 30);
+            }
+        }
+
+        // Lanzar confeti al cargar
+        window.addEventListener('load', () => {
+            setTimeout(createConfetti, 500);
+        });
+
+        // 2. ANIMACIONES AL HACER SCROLL
+        function handleScrollAnimations() {
+            const animatedElements = document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right');
+
+            animatedElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+
+                if (elementTop < window.innerHeight * 0.85 && elementBottom > 0) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScrollAnimations, { passive: true });
+        window.addEventListener('load', handleScrollAnimations);
+
+        // 3. PARTÍCULAS MÁS VISIBLES
+        function createVisibleParticles() {
+            const particles = ['🎉', '🎊', '✨', '💖', '🌸', '🎈', '⭐', '💫'];
+            const container = document.body;
+
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle-visible';
+                particle.textContent = particles[Math.floor(Math.random() * particles.length)];
+                particle.style.left = Math.random() * (window.innerWidth - 50) + 'px';
+                particle.style.top = Math.random() * window.innerHeight + 'px';
+                particle.style.animationDelay = (Math.random() * 5) + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        window.addEventListener('load', createVisibleParticles);
+
+        // 4. SHIMMER EN EL NÚMERO 50
+        window.addEventListener('load', () => {
+            const numero50 = document.querySelector('#portada h1');
+            if (numero50) {
+                setInterval(() => {
+                    const shimmer = document.createElement('div');
+                    shimmer.className = 'shimmer-effect';
+                    shimmer.style.position = 'absolute';
+                    shimmer.style.top = '0';
+                    shimmer.style.left = '0';
+                    shimmer.style.width = '100%';
+                    shimmer.style.height = '100%';
+                    shimmer.style.pointerEvents = 'none';
+                    numero50.parentElement.style.position = 'relative';
+                    numero50.parentElement.appendChild(shimmer);
+                    setTimeout(() => shimmer.remove(), 3000);
+                }, 5000);
+            }
+        });
+
+        // 5. EFECTO PARALLAX EN DECORACIONES
+        function initParallax() {
+            const parallaxElements = document.querySelectorAll('.parallax-layer');
+
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+
+                parallaxElements.forEach(element => {
+                    const speed = element.dataset.speed || 0.5;
+                    const yPos = -(scrolled * speed);
+                    element.style.transform = `translateY(${yPos}px)`;
+                });
+            }, { passive: true });
+        }
+
+        window.addEventListener('load', initParallax);
+
+        // 6. TRANSICIONES SUAVES ENTRE SECCIONES
+        function initSectionTransitions() {
+            const sections = document.querySelectorAll('section');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -20% 0px',
+                threshold: 0.1
+            };
+
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('section-entering');
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+        }
+
+        window.addEventListener('load', initSectionTransitions);
+
     </script>
 
     <script src="script.js"></script>
 
-    <!-- Script para control de música -->
+    <!-- Script para control de música MEJORADO -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const music = document.getElementById('backgroundMusic');
             const toggleButton = document.getElementById('toggleMusic');
             const musicControl = document.getElementById('musicControl');
+            const audioBars = document.querySelectorAll('.audio-bar');
+            const audioVisualizer = document.getElementById('audioVisualizer');
+            const songTooltip = document.getElementById('songTooltip');
             let isPlaying = false;
+
+            // Función para mostrar el tooltip con el nombre de la canción
+            function showSongTooltip() {
+                songTooltip.style.opacity = '1';
+                songTooltip.style.transform = 'translateY(0)';
+            }
+
+            // Función para ocultar el tooltip
+            function hideSongTooltip() {
+                songTooltip.style.opacity = '0';
+                songTooltip.style.transform = 'translateY(8px)';
+            }
 
             // Función para reproducir/pausar la música
             function toggleMusic() {
                 if (isPlaying) {
                     music.pause();
                     toggleButton.textContent = '🎵';
+                    // Ocultar visualizador completamente
+                    audioBars.forEach(bar => bar.classList.add('paused'));
+                    audioVisualizer.style.display = 'none';
+                    // Ocultar el nombre de la canción
+                    hideSongTooltip();
                 } else {
                     music.play();
                     toggleButton.textContent = '⏸️';
+                    // Mostrar y reanudar animación de barras
+                    audioBars.forEach(bar => bar.classList.remove('paused'));
+                    audioVisualizer.style.display = 'flex';
+                    // Mostrar el nombre de la canción
+                    showSongTooltip();
                 }
                 isPlaying = !isPlaying;
             }
