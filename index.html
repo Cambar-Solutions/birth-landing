@@ -86,7 +86,7 @@
     <div id="particles-container" class="fixed inset-0 pointer-events-none z-0"></div>
 
     <!-- Sección Portada -->
-    <section id="portada" class="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-12 bg-gradient-to-br from-pink-50 via-white to-purple-50">
+    <section id="portada" class="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-6 bg-gradient-to-br from-pink-50 via-white to-purple-50">
 
         <!-- Decoración esquina superior izquierda: flores doradas CON PARALLAX -->
         <div class="absolute top-0 left-0 w-48 md:w-80 opacity-70 parallax-layer" data-speed="0.3">
@@ -121,14 +121,9 @@
         <div class="relative z-10 text-center max-w-4xl mx-auto w-full flex flex-col items-center">
 
             <!-- Texto "mis" ARRIBA del 50 -->
-            <div class="relative inline-block -mb-32 sm:-mb-40 md:-mb-52 group/text-top" style="perspective: 1000px;">
-                <!-- Múltiples capas de brillo -->
-                <div class="absolute inset-0 text-7xl sm:text-8xl md:text-9xl font-bold font-playfair opacity-30 blur-3xl animate-pulse" style="color: rgba(253, 224, 71, 0.6); -webkit-text-stroke: 0px;">mis</div>
-                <div class="absolute inset-0 text-7xl sm:text-8xl md:text-9xl font-bold font-playfair opacity-25 blur-2xl animate-pulse" style="animation-delay: 0.5s; color: rgba(244, 114, 182, 0.6); -webkit-text-stroke: 0px;">mis</div>
-                <div class="absolute inset-0 text-7xl sm:text-8xl md:text-9xl font-bold font-playfair opacity-20 blur-xl animate-pulse" style="animation-delay: 1s; color: rgba(192, 132, 252, 0.6); -webkit-text-stroke: 0px;">mis</div>
-
+            <div class="relative inline-block -mb-32 sm:-mb-40 md:-mb-52" style="perspective: 1000px;">
                 <!-- Texto "mis" principal -->
-                <h2 class="text-7xl sm:text-8xl md:text-9xl font-bold font-playfair relative z-10 transform group-hover/text-top:scale-110 transition-all duration-500 animate-float"
+                <h2 class="text-7xl sm:text-8xl md:text-9xl font-bold font-playfair relative z-10 animate-float"
                     style="
                         background: linear-gradient(to bottom, rgb(253, 224, 71), rgb(234, 179, 8), rgb(161, 98, 7));
                         -webkit-background-clip: text;
@@ -163,15 +158,9 @@
                     ">50</h1>
             </div>
 
-            <!-- Texto "vueltas al sol" ABAJO del 50 -->
-            <div class="relative inline-block mb-6 group/text-bottom" style="perspective: 1000px;">
-                <!-- Múltiples capas de brillo -->
-                <div class="absolute inset-0 text-7xl sm:text-8xl md:text-9xl font-bold font-playfair opacity-30 blur-3xl animate-pulse" style="color: rgba(253, 224, 71, 0.6); -webkit-text-stroke: 0px;">vueltas al sol</div>
-                <div class="absolute inset-0 text-7xl sm:text-8xl md:text-9xl font-bold font-playfair opacity-25 blur-2xl animate-pulse" style="animation-delay: 0.5s; color: rgba(244, 114, 182, 0.6); -webkit-text-stroke: 0px;">vueltas al sol</div>
-                <div class="absolute inset-0 text-7xl sm:text-8xl md:text-9xl font-bold font-playfair opacity-20 blur-xl animate-pulse" style="animation-delay: 1s; color: rgba(192, 132, 252, 0.6); -webkit-text-stroke: 0px;">vueltas al sol</div>
-
-                <!-- Texto "vueltas al sol" principal -->
-                <h2 class="text-7xl sm:text-8xl md:text-9xl font-bold font-playfair relative z-10 transform group-hover/text-bottom:scale-110 transition-all duration-500 animate-float"
+            <!-- Texto "vueltas al" y "sol" ABAJO del 50 -->
+            <div class="relative inline-block mb-6" style="perspective: 1000px;">
+                <h2 class="text-7xl sm:text-8xl md:text-9xl font-bold font-playfair relative z-10 animate-float"
                     style="
                         background: linear-gradient(to bottom, rgb(253, 224, 71), rgb(234, 179, 8), rgb(161, 98, 7));
                         -webkit-background-clip: text;
@@ -184,7 +173,7 @@
 
         
             <!-- Nombre MEGA MEJORADO -->
-            <div class="relative inline-block mb-12 w-full px-4 scroll-animate group/nombre" style="perspective: 1000px; transition-delay: 0.1s;">
+            <div class="relative inline-block mb-6 w-full px-4 scroll-animate group/nombre" style="perspective: 1000px; transition-delay: 0.1s;">
                 <!-- Círculo de resplandor animado de fondo -->
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div class="w-[20rem] h-[20rem] sm:w-[28rem] sm:h-[28rem] md:w-[36rem] md:h-[36rem] rounded-full bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 opacity-20 blur-3xl animate-pulse"></div>
@@ -248,7 +237,7 @@
             </div>
 
             <!-- Tarjeta de advertencia sorpresa -->
-            <div class="sorpresa-card max-w-3xl mx-auto mb-8 px-4 mt-8 scroll-animate" role="status" aria-label="Fiesta sorpresa - por favor no decirle a Norma">
+            <div class="sorpresa-card max-w-3xl mx-auto mb-4 px-4 mt-4 scroll-animate" role="status" aria-label="Fiesta sorpresa - por favor no decirle a Norma">
                 <div class="relative bg-white/95 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-2xl border-4 border-pink-300">
                     <div class="sorpresa-inner flex items-center justify-center gap-4 md:gap-6">
                         <span class="text-4xl md:text-5xl animate-bounce-slow">⚠️</span>
@@ -262,7 +251,7 @@
             </div>
 
             <!-- Tarjeta de código de vestimenta -->
-            <div class="sorpresa-card max-w-3xl mx-auto mb-8 px-4 scroll-animate" role="status" aria-label="Código de vestimenta">
+            <div class="sorpresa-card max-w-3xl mx-auto mb-4 px-4 scroll-animate" role="status" aria-label="Código de vestimenta">
                 <div class="relative bg-white/95 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-2xl border-4 border-pink-300">
                     <div class="sorpresa-inner flex items-center justify-center gap-4 md:gap-6">
                         <span class="text-4xl md:text-5xl animate-bounce-slow">👚</span>
@@ -275,7 +264,7 @@
             </div>
 
             <!-- Mensaje de scroll mejorado -->
-            <div class="mt-12 flex flex-col items-center gap-4 w-full px-4 scroll-animate" style="transition-delay: 0.3s;">
+            <div class="mt-6 flex flex-col items-center gap-4 w-full px-4 scroll-animate" style="transition-delay: 0.3s;">
                 <div class="relative inline-block w-full max-w-md">
                     <div class="absolute inset-0 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 rounded-full blur-lg opacity-50 animate-pulse"></div>
                     <div class="relative bg-white/90 backdrop-blur-sm px-6 md:px-8 py-3 md:py-4 rounded-full shadow-2xl border-2 border-pink-300 transform hover:scale-105 transition-all">
@@ -338,7 +327,7 @@
     </section>
 
     <!-- Sección Bienvenida -->
-    <section id="bienvenida" class="min-h-screen flex items-center justify-center px-4 py-16 md:py-24 relative overflow-hidden scroll-animate">
+    <section id="bienvenida" class="flex items-center justify-center px-4 py-8 md:py-12 relative overflow-hidden scroll-animate">
         <!-- Efectos de fondo simplificados -->
         <div class="absolute inset-0 pointer-events-none">
             <!-- Corazones flotantes -->
@@ -349,7 +338,7 @@
 
         <div class="max-w-4xl mx-auto text-center relative z-10 px-4 w-full flex justify-center">
             <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-12 transform hover:scale-105 transition-all duration-300 border-4 border-pink-200 relative group w-full max-w-2xl scroll-animate">
-                <div class="relative inline-block mb-8">
+                <div class="relative inline-block mb-4">
                     <!-- Marco decorativo con efecto de brillo -->
                     <div class="absolute -inset-4 bg-gradient-to-r from-pink-300 via-pink-200 to-pink-300 rounded-[2rem] opacity-75" style="filter: blur(10px);"></div>
                     <div class="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 rounded-[2rem]"></div>
@@ -358,7 +347,7 @@
                 </div>
 
                 <!-- Título con efectos -->
-                <div class="relative inline-block mb-6 w-full">
+                <div class="relative inline-block mb-3 w-full">
                     <div class="absolute inset-0 bg-gradient-to-r from-pink-400 to-purple-400 blur-md opacity-30"></div>
                     <p class="relative text-xl md:text-3xl font-parisienne text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-purple-600 to-pink-600">
                         Mis 50 ❤️
@@ -371,7 +360,7 @@
                 </p>
 
                 <!-- Línea decorativa -->
-                <div class="flex items-center justify-center gap-3 mt-8 w-full">
+                <div class="flex items-center justify-center gap-3 mt-4 w-full">
                     <div class="w-16 md:w-20 h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent rounded-full"></div>
                     <span class="text-2xl animate-bounce-slow">🌸</span>
 
@@ -380,7 +369,7 @@
             </div>
         </div>
     </section>
-<section id="itinerario" class="px-4 py-12 sm:py-16 bg-pink-50/80 backdrop-blur-sm relative scroll-animate">
+<section id="itinerario" class="px-4 py-6 sm:py-8 bg-pink-50/80 backdrop-blur-sm relative scroll-animate">
     <div class="container mx-auto text-center z-10">
       <h3 class="relative text-2xl md:text-5xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-purple-700 mb-4 px-4">
     Itinerario del Día
@@ -474,7 +463,7 @@
                 </div>
 
                 <!-- Horas -->
-                <div class="countdown-box group scroll-animate" style="transition-delay: 0.1s;">
+                <div class="countdown-box group scroll-animate">
                     <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity animate-pulse-glow" style="animation-delay: 0.5s;"></div>
                     <div class="relative bg-white rounded-2xl shadow-2xl p-6 md:p-8 transform group-hover:scale-110 transition-all duration-300 border-4 border-purple-200">
                         <div class="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full shadow-lg animate-bounce-slow" style="animation-delay: 0.2s;"></div>
@@ -486,7 +475,7 @@
                 </div>
 
                 <!-- Minutos -->
-                <div class="countdown-box group scroll-animate" style="transition-delay: 0.2s;">
+                <div class="countdown-box group scroll-animate">
                     <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-pink-600 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity animate-pulse-glow" style="animation-delay: 1s;"></div>
                     <div class="relative bg-white rounded-2xl shadow-2xl p-6 md:p-8 transform group-hover:scale-110 transition-all duration-300 border-4 border-pink-200">
                         <div class="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full shadow-lg animate-bounce-slow" style="animation-delay: 0.4s;"></div>
@@ -498,7 +487,7 @@
                 </div>
 
                 <!-- Segundos -->
-                <div class="countdown-box group scroll-animate" style="transition-delay: 0.3s;">
+                <div class="countdown-box group scroll-animate">
                     <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity animate-pulse-glow" style="animation-delay: 1.5s;"></div>
                     <div class="relative bg-white rounded-2xl shadow-2xl p-6 md:p-8 transform group-hover:scale-110 transition-all duration-300 border-4 border-purple-200">
                         <div class="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full shadow-lg animate-bounce-slow" style="animation-delay: 0.6s;"></div>
@@ -544,7 +533,7 @@
 
         <div class="max-w-7xl mx-auto w-full relative z-10">
             <!-- Título mejorado -->
-            <div class="relative inline-block mb-12 w-full text-center scroll-animate">
+            <div class="relative inline-block mb-4 w-full text-center scroll-animate">
                 <div class="absolute inset-0 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 blur-xl opacity-30"></div>
                 <h3 class="relative text-3xl md:text-5xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-purple-700 mb-4">
                     Sesión de fotos
@@ -943,7 +932,7 @@
             </div>
 
             <!-- Mensaje mejorado -->
-            <div class="text-center mt-8 md:hidden scroll-animate" style="transition-delay: 0.4s;">
+            <div class="text-center mt-2 md:hidden scroll-animate" style="transition-delay: 0.4s;">
                 <div class="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border-2 border-pink-200">
                     <p class="text-gray-700 font-semibold">Sigue bajando para ver la ubicación </p>
                     <span class="text-2xl animate-bounce-slow">📍</span>
@@ -954,7 +943,7 @@
     </section>
 
     <!-- Sección Ubicación -->
-    <section id="ubicacion" class="min-h-screen flex items-center justify-center px-4 py-16 bg-gradient-to-br from-purple-100 to-pink-100 relative overflow-hidden scroll-animate">
+    <section id="ubicacion" class="flex items-center justify-center px-4 py-8 bg-gradient-to-br from-purple-100 to-pink-100 relative overflow-hidden scroll-animate">
         
         <!-- Efectos de fondo -->
         <div class="absolute inset-0 pointer-events-none">
@@ -968,7 +957,7 @@
 
         <div class="max-w-4xl mx-auto w-full relative z-10">
             <!-- Título mejorado -->
-            <div class="relative inline-block mb-8 w-full text-center scroll-animate">
+            <div class="relative inline-block mb-4 w-full text-center scroll-animate">
                 <div class="absolute inset-0 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 blur-xl opacity-30 animate-pulse"></div>
                 <h3 class="relative text-3xl md:text-5xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-purple-700 mb-4">
                     Ubicación de la fiesta
@@ -991,7 +980,7 @@
                 <div class="absolute -bottom-4 -right-4 w-10 h-10 bg-gradient-to-br from-pink-400 to-yellow-400 rounded-full animate-bounce-slow shadow-lg" style="animation-delay: 1.5s;"></div>
 
                 <!-- Dirección mejorada -->
-                <div class="relative mb-8">
+                <div class="relative mb-4">
                     <div class="absolute inset-0 bg-gradient-to-r from-pink-200 to-purple-200 blur-sm opacity-50 rounded-xl"></div>
                     <p class="relative text-lg md:text-xl text-gray-800 text-center py-4 px-6 bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl border-2 border-pink-200 font-semibold flex items-center justify-center gap-3">
                         <span class="text-2xl animate-bounce-slow">📍</span>
@@ -1000,7 +989,7 @@
                 </div>
 
                 <!-- Mapa con efectos -->
-                <div class="relative group/map mb-6">
+                <div class="relative group/map mb-4">
                     <div class="absolute -inset-2 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 rounded-2xl blur-md opacity-30 group-hover/map:opacity-50 transition-opacity"></div>
                     <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white ring-4 ring-pink-200 group-hover/map:ring-purple-300 transition-all">
                         <iframe
@@ -1023,21 +1012,111 @@
                 </div>
                 
                 <!-- Mensaje adicional -->
-                <div class="mt-6 text-center">
+                <div class="mt-4 text-center">
                     <p class="text-sm md:text-base text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 font-semibold">
                         ¡Te esperamos con mucho cariño! 💕
                     </p>
-                    <p class="text-sm md:text-base text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 font-semibold">
-                        ¡Por favor confirma tu asistencia! 👍
-                    </p>
-                    
                 </div>
                 
             </div>
-            
+
         </div>
-        
+
     </section>
+
+    <!-- Sección Confirmación de Asistencia -->
+    <section class="flex items-center justify-center px-4 py-8 bg-gradient-to-br from-pink-100 to-purple-100 relative overflow-hidden">
+        <div class="max-w-2xl mx-auto w-full relative z-10">
+            <div class="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-6 md:p-10 relative group border-4 border-pink-300 scroll-animate">
+                <!-- Efectos decorativos -->
+                <div class="absolute inset-0 bg-gradient-to-br from-pink-300 via-purple-300 to-pink-300 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+
+                <!-- Título -->
+                <div class="text-center mb-6 relative">
+                    <div class="inline-block mb-3">
+                        <span class="text-6xl animate-bounce-slow">📞</span>
+                    </div>
+                    <h3 class="text-2xl md:text-4xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-pink-700 via-purple-600 to-pink-700 mb-3 font-bold">
+                        ¡Por favor confirma tu asistencia!
+                    </h3>
+                </div>
+
+                <!-- Tarjeta de teléfono -->
+                <div class="relative mb-4">
+                    <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl blur-md opacity-30"></div>
+                    <div class="relative bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-6 border-4 border-pink-200">
+                        <p class="text-center text-gray-700 text-base md:text-lg mb-4 font-semibold">
+                            Comunícate al siguiente número:
+                        </p>
+                        <a href="tel:7421107248" class="block text-center">
+                            <div class="bg-white rounded-xl p-4 shadow-lg border-2 border-purple-200 hover:border-purple-400 transition-all transform hover:scale-105">
+                                <p class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 flex items-center justify-center gap-3">
+                                    <span class="text-4xl">📱</span>
+                                    742 110 7248
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mensaje adicional -->
+                <div class="text-center relative">
+                    <p class="text-base md:text-lg text-gray-700 font-semibold flex items-center justify-center gap-2">
+                        <span class="text-2xl">👍</span>
+                        ¡Tu confirmación es muy importante para nosotros!
+                        <span class="text-2xl">💕</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Efectos de fondo -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-32 h-32 bg-pink-300 rounded-full opacity-20 blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-32 h-32 bg-purple-300 rounded-full opacity-20 blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+    </section>
+
+    <!-- Sección Agregar al Calendario -->
+    <section id="calendario" class="flex items-center justify-center px-4 py-8 bg-gradient-to-br from-pink-50 to-purple-50 relative overflow-hidden">
+        <div class="max-w-2xl mx-auto w-full relative z-10">
+            <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-10 border-4 border-pink-200 scroll-animate">
+                <!-- Título -->
+                <div class="text-center mb-6">
+                    <div class="inline-block mb-3">
+                        <span class="text-6xl animate-bounce-slow">📅</span>
+                    </div>
+                    <h3 class="text-2xl md:text-4xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-purple-700 mb-3">
+                        No te lo pierdas
+                    </h3>
+                    <p class="text-base md:text-lg text-gray-700 mb-6">
+                        Agrega el evento a tu calendario y recibe un recordatorio para que no olvides esta fecha especial
+                    </p>
+                </div>
+
+                <!-- Botón Agregar al Calendario -->
+                <button id="addToCalendar" class="pulse-button w-full bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 text-white text-center py-5 rounded-xl font-bold text-lg hover:from-pink-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-2xl border-2 border-white flex items-center justify-center gap-3">
+                    <span class="text-2xl">📲</span>
+                    Agregar al Calendario
+                    <span class="text-2xl">🎉</span>
+                </button>
+
+                <!-- Información adicional -->
+                <div class="mt-4 text-center">
+                    <p class="text-sm text-gray-600">
+                        Compatible con iPhone, Android y todos los calendarios
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Efectos de fondo -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-32 h-32 bg-pink-300 rounded-full opacity-20 blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-32 h-32 bg-purple-300 rounded-full opacity-20 blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+    </section>
+
     <!-- Banner distintivo: Fiesta Sorpresa (ubicado sobre el itinerario) dentro de tarjeta -->
               <div class="sorpresa-card max-w-3xl mx-auto mb-8 px-4" role="status" aria-label="Fiesta sorpresa - por favor no decirle a Norma">
                   <div class="relative bg-white/95 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-2xl border-4 border-pink-300">
@@ -1380,8 +1459,8 @@
         .scroll-animate {
             opacity: 0;
             transform: translateY(20px) scale(0.98);
-            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-                        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .scroll-animate.visible {
@@ -1481,8 +1560,8 @@
         .scroll-animate-left {
             opacity: 0;
             transform: translateX(-30px) scale(0.98);
-            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-                        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .scroll-animate-left.visible {
@@ -1493,8 +1572,8 @@
         .scroll-animate-right {
             opacity: 0;
             transform: translateX(30px) scale(0.98);
-            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-                        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .scroll-animate-right.visible {
@@ -2119,6 +2198,86 @@
 
             // Animación suave del control de música
             musicControl.classList.add('animate-fade-in');
+        });
+    </script>
+
+    <!-- Script para agregar al calendario -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addToCalendarBtn = document.getElementById('addToCalendar');
+
+            addToCalendarBtn.addEventListener('click', function() {
+                // Crear el evento en formato iCalendar (.ics)
+                const event = {
+                    title: "Cumpleaños 50 de Norma Sotelo Pérez",
+                    description: "¡Celebración de los 50 años de Norma! Fiesta sorpresa - Por favor no mencionar nada a Norma.",
+                    location: "M. Ávila Camacho 46, Benito Juárez, Xochitepec, Morelos, Mexico",
+                    start: new Date('2025-12-27T15:30:00'),
+                    end: new Date('2025-12-27T23:00:00')
+                };
+
+                // Formatear fechas para iCalendar (formato: YYYYMMDDTHHMMSS)
+                const formatDate = (date) => {
+                    const year = date.getFullYear();
+                    const month = String(date.getMonth() + 1).padStart(2, '0');
+                    const day = String(date.getDate()).padStart(2, '0');
+                    const hours = String(date.getHours()).padStart(2, '0');
+                    const minutes = String(date.getMinutes()).padStart(2, '0');
+                    const seconds = String(date.getSeconds()).padStart(2, '0');
+                    return `${year}${month}${day}T${hours}${minutes}${seconds}`;
+                };
+
+                // Crear el contenido del archivo .ics
+                const icsContent = [
+                    'BEGIN:VCALENDAR',
+                    'VERSION:2.0',
+                    'PRODID:-//Cumpleaños Norma//ES',
+                    'CALSCALE:GREGORIAN',
+                    'METHOD:PUBLISH',
+                    'BEGIN:VEVENT',
+                    `DTSTART:${formatDate(event.start)}`,
+                    `DTEND:${formatDate(event.end)}`,
+                    `SUMMARY:${event.title}`,
+                    `DESCRIPTION:${event.description}`,
+                    `LOCATION:${event.location}`,
+                    'STATUS:CONFIRMED',
+                    'BEGIN:VALARM',
+                    'TRIGGER:-P1D',
+                    'ACTION:DISPLAY',
+                    'DESCRIPTION:Recordatorio: Mañana es el cumpleaños de Norma',
+                    'END:VALARM',
+                    'BEGIN:VALARM',
+                    'TRIGGER:-PT2H',
+                    'ACTION:DISPLAY',
+                    'DESCRIPTION:Recordatorio: En 2 horas empieza el cumpleaños de Norma',
+                    'END:VALARM',
+                    'END:VEVENT',
+                    'END:VCALENDAR'
+                ].join('\r\n');
+
+                // Crear y descargar el archivo .ics
+                const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = 'cumpleanos_norma_50.ics';
+
+                // Simular click para descargar
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+
+                // Mostrar mensaje de confirmación
+                const originalText = addToCalendarBtn.innerHTML;
+                addToCalendarBtn.innerHTML = '<span class="text-2xl">✅</span> ¡Agregado! Revisa tus descargas <span class="text-2xl">📱</span>';
+                addToCalendarBtn.style.background = 'linear-gradient(to right, #10b981, #059669)';
+
+                setTimeout(() => {
+                    addToCalendarBtn.innerHTML = originalText;
+                    addToCalendarBtn.style.background = '';
+                }, 3000);
+            });
         });
     </script>
 </body>
