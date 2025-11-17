@@ -86,7 +86,7 @@
     <div id="particles-container" class="fixed inset-0 pointer-events-none z-0"></div>
 
     <!-- Sección Portada -->
-    <section id="portada" class="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-6 bg-gradient-to-br from-pink-50 via-white to-purple-50">
+    <section id="portada" class="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-6">
 
         <!-- Decoración esquina superior izquierda: flores doradas CON PARALLAX -->
         <div class="absolute top-0 left-0 w-48 md:w-80 opacity-70 parallax-layer" data-speed="0.3">
@@ -365,11 +365,12 @@
                     <span class="text-2xl animate-bounce-slow">🌸</span>
 
                     <div class="w-16 md:w-20 h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent rounded-full"></div>
-                </div>
+               
+            </div>
             </div>
         </div>
     </section>
-<section id="itinerario" class="px-4 py-6 sm:py-8 bg-pink-50/80 backdrop-blur-sm relative scroll-animate">
+<section id="itinerario" class="px-4 py-6 sm:py-8 relative scroll-animate">
     <div class="container mx-auto text-center z-10">
       <h3 class="relative text-2xl md:text-5xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-purple-700 mb-4 px-4">
     Itinerario del Día
@@ -417,14 +418,14 @@
                           <div class="text-center">
                               <div class="text-base md:text-2xl font-bold text-pink-600">Pedimos portar algo rosa: prenda, moño, labial, gorra, accesorio... ¡Es color favorito de Normita! 💕</div>
                           </div>
-
                       </div>
+                      
                   </div>
               </div>
 
 
     <!-- Sección Cuenta Regresiva -->
-    <section id="cuenta-regresiva" class="flex items-center justify-center px-4 py-6 bg-gradient-to-br from-purple-100 to-pink-100 relative overflow-hidden">
+    <section id="cuenta-regresiva" class="flex items-center justify-center px-4 py-6 relative overflow-hidden">
 
         <!-- Efectos de fondo para el reloj -->
         <div class="absolute inset-0 pointer-events-none">
@@ -520,6 +521,7 @@
                           </div>
                     <span class="text-4xl md:text-5xl animate-bounce-slow">⚠️</span>
                       </div>
+                      
                   </div>
               </div>
         <!-- Efectos de fondo -->
@@ -943,7 +945,7 @@
     </section>
 
     <!-- Sección Ubicación -->
-    <section id="ubicacion" class="flex items-center justify-center px-4 py-8 bg-gradient-to-br from-purple-100 to-pink-100 relative overflow-hidden scroll-animate">
+    <section id="ubicacion" class="flex items-center justify-center px-4 py-8 relative overflow-hidden scroll-animate">
         
         <!-- Efectos de fondo -->
         <div class="absolute inset-0 pointer-events-none">
@@ -1025,38 +1027,23 @@
     </section>
 
     <!-- Sección Confirmación de Asistencia -->
-    <section class="flex items-center justify-center px-4 py-8 bg-gradient-to-br from-pink-100 to-purple-100 relative overflow-hidden">
+    <section class="flex items-center justify-center px-4 py-8 relative overflow-hidden">
         <div class="max-w-2xl mx-auto w-full relative z-10">
             <div class="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-6 md:p-10 relative group border-4 border-pink-300 scroll-animate">
                 <!-- Efectos decorativos -->
                 <div class="absolute inset-0 bg-gradient-to-br from-pink-300 via-purple-300 to-pink-300 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
 
-                <!-- Título -->
-                <div class="text-center mb-6 relative">
+                <!-- Mensaje de confirmación integrado -->
+                <div class="text-center relative">
                     <div class="inline-block mb-3">
                         <span class="text-6xl animate-bounce-slow">📞</span>
                     </div>
-                    <h3 class="text-2xl md:text-4xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-pink-700 via-purple-600 to-pink-700 mb-3 font-bold">
+                    <h3 class="text-2xl md:text-4xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-pink-700 via-purple-600 to-pink-700 mb-4 font-bold">
                         ¡Por favor confirma tu asistencia!
                     </h3>
-                </div>
-
-                <!-- Tarjeta de teléfono -->
-                <div class="relative mb-4">
-                    <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl blur-md opacity-30"></div>
-                    <div class="relative bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-6 border-4 border-pink-200">
-                        <p class="text-center text-gray-700 text-base md:text-lg mb-4 font-semibold">
-                            Comunícate al siguiente número:
-                        </p>
-                        <a href="tel:7421107248" class="block text-center">
-                            <div class="bg-white rounded-xl p-4 shadow-lg border-2 border-purple-200 hover:border-purple-400 transition-all transform hover:scale-105">
-                                <p class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 flex items-center justify-center gap-3">
-                                    <span class="text-4xl">📱</span>
-                                    742 110 7248
-                                </p>
-                            </div>
-                        </a>
-                    </div>
+                    <p class="text-base md:text-lg text-gray-700 font-semibold px-4">
+                        Número de Yael: <a href="tel:7421107248" class="text-gray-700 font-semibold hover:text-pink-600 transition-all transform hover:scale-105 inline-block">742 110 7248</a>
+                    </p>
                 </div>
 
                 <!-- Mensaje adicional -->
@@ -1078,7 +1065,7 @@
     </section>
 
     <!-- Sección Agregar al Calendario -->
-    <section id="calendario" class="flex items-center justify-center px-4 py-8 bg-gradient-to-br from-pink-50 to-purple-50 relative overflow-hidden">
+    <section id="calendario" class="flex items-center justify-center px-4 py-8 relative overflow-hidden">
         <div class="max-w-2xl mx-auto w-full relative z-10">
             <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-10 border-4 border-pink-200 scroll-animate">
                 <!-- Título -->
@@ -1101,12 +1088,7 @@
                     <span class="text-2xl">🎉</span>
                 </button>
 
-                <!-- Información adicional -->
-                <div class="mt-4 text-center">
-                    <p class="text-sm text-gray-600">
-                        Compatible con iPhone, Android y todos los calendarios
-                    </p>
-                </div>
+                
             </div>
         </div>
 
@@ -1151,7 +1133,7 @@
 
         .section, section {
             scroll-snap-align: start;
-            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
         }
 
         /* Transiciones suaves entre secciones */
@@ -1161,7 +1143,7 @@
         }
 
         section.section-entering {
-            animation: sectionFadeIn 0.8s ease-out;
+            animation: sectionFadeIn 0.6s ease-out;
         }
 
         @keyframes sectionFadeIn {
@@ -1172,6 +1154,29 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+
+        /* Animaciones más rápidas y fluidas para móvil */
+        @media (max-width: 768px) {
+            .section, section {
+                transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                            transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+
+            section.section-entering {
+                animation: sectionFadeInMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+
+            @keyframes sectionFadeInMobile {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px) scale(0.98);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
             }
         }
 
@@ -1198,6 +1203,27 @@
             50% { transform: translateY(-15px); }
         }
 
+        /* Animaciones flotantes más sutiles para móvil */
+        @media (max-width: 768px) {
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+            }
+
+            @keyframes float-slow {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-8px); }
+            }
+
+            .animate-float {
+                animation: float 2.5s ease-in-out infinite;
+            }
+
+            .animate-float-slow {
+                animation: float-slow 3s ease-in-out infinite;
+            }
+        }
+
         @keyframes spin-slow {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
@@ -1206,6 +1232,18 @@
         @keyframes bounce-slow {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
+        }
+
+        /* Rebote más sutil en móvil */
+        @media (max-width: 768px) {
+            @keyframes bounce-slow {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-6px); }
+            }
+
+            .animate-bounce-slow {
+                animation: bounce-slow 2s ease-in-out infinite;
+            }
         }
 
         @keyframes fade-bounce-1 {
@@ -1406,6 +1444,25 @@
             animation: fade-in 0.6s ease-out 0.7s both;
         }
 
+        /* Cascadas más rápidas para móvil */
+        @media (max-width: 768px) {
+            .fade-cascade-1 {
+                animation: fade-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s both;
+            }
+
+            .fade-cascade-2 {
+                animation: fade-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s both;
+            }
+
+            .fade-cascade-3 {
+                animation: fade-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.25s both;
+            }
+
+            .fade-cascade-4 {
+                animation: fade-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.35s both;
+            }
+        }
+
         /* Animaciones nuevas */
 
         /* 1. Confeti */
@@ -1459,13 +1516,28 @@
         .scroll-animate {
             opacity: 0;
             transform: translateY(20px) scale(0.98);
-            transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .scroll-animate.visible {
             opacity: 1;
             transform: translateY(0) scale(1);
+        }
+
+        /* Animaciones más rápidas para móvil */
+        @media (max-width: 768px) {
+            .scroll-animate {
+                opacity: 0;
+                transform: translateY(15px) scale(0.95);
+                transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                            transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+
+            .scroll-animate.visible {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
 
         /* Hacer que los elementos de portada sean visibles desde el inicio */
@@ -1503,6 +1575,30 @@
 
         /* OPTIMIZACIONES MÓVILES */
         @media (max-width: 768px) {
+            /* Optimización de rendimiento para animaciones */
+            .scroll-animate,
+            section,
+            .countdown-box,
+            .animate-float,
+            .animate-float-slow,
+            .animate-bounce-slow {
+                will-change: transform, opacity;
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+
+            /* Mejorar scroll suave */
+            html {
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            body {
+                scroll-snap-type: y proximity; /* Menos agresivo en móvil */
+            }
+
             /* Mejorar número 50 en móvil */
             #portada h1 {
                 font-size: 18rem !important;
@@ -1538,6 +1634,52 @@
                 min-height: 44px;
                 min-width: 44px;
             }
+
+            /* Transiciones más rápidas para elementos hover en móvil */
+            .group:hover,
+            .group-hover\\:scale-105,
+            .hover\\:scale-105 {
+                transition-duration: 0.2s !important;
+            }
+
+            /* Animaciones escalonadas más rápidas para galería */
+            .grid > div:nth-child(1) .scroll-animate {
+                transition-delay: 0.05s;
+            }
+            .grid > div:nth-child(2) .scroll-animate {
+                transition-delay: 0.1s;
+            }
+            .grid > div:nth-child(3) .scroll-animate {
+                transition-delay: 0.15s;
+            }
+            .grid > div:nth-child(4) .scroll-animate {
+                transition-delay: 0.2s;
+            }
+            .grid > div:nth-child(5) .scroll-animate {
+                transition-delay: 0.25s;
+            }
+            .grid > div:nth-child(6) .scroll-animate {
+                transition-delay: 0.3s;
+            }
+
+            /* Efecto bounce suave en entrada de elementos */
+            .scroll-animate.visible {
+                animation: mobileSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            }
+
+            @keyframes mobileSlideIn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(20px) scale(0.95);
+                }
+                50% {
+                    transform: translateY(-5px) scale(1.01);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+            }
         }
 
         /* Optimización para pantallas muy pequeñas */
@@ -1560,8 +1702,17 @@
         .scroll-animate-left {
             opacity: 0;
             transform: translateX(-30px) scale(0.98);
-            transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @media (max-width: 768px) {
+            .scroll-animate-left {
+                opacity: 0;
+                transform: translateX(-20px) scale(0.96);
+                transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                            transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
         }
 
         .scroll-animate-left.visible {
