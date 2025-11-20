@@ -8,6 +8,12 @@
     
     <!-- Control de música MINIMALISTA -->
     <div id="musicControl" class="fixed bottom-6 right-6 z-50 group">
+        <!-- Indicador "Click me" -->
+        <div id="clickMeIndicator" class="absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap transition-opacity duration-300 pointer-events-none">
+            <div class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg animate-bounce">
+                ¡Presióname! 🎵
+            </div>
+        </div>
         <!-- Botón de música con diseño de disco de vinilo -->
         <button id="toggleMusic" class="relative w-20 h-20 cursor-pointer transition-all hover:scale-110 music-vinyl-button">
             <!-- Anillo de pulso llamativo -->
@@ -85,6 +91,12 @@
     <!-- Partículas flotantes de fondo -->
     <div id="particles-container" class="fixed inset-0 pointer-events-none z-0"></div>
 
+    <!-- Indicador de scroll - Línea de gradiente -->
+    <div id="scrollLine" class="fixed bottom-0 left-0 right-0 h-1 z-40 transition-opacity duration-500 pointer-events-none">
+        <div class="h-full bg-gradient-to-r from-transparent via-pink-500 to-transparent animate-pulse"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-pink-400 via-purple-500 to-pink-400 animate-pulse-glow"></div>
+    </div>
+
     <!-- Sección Portada -->
     <section id="portada" class="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-6">
 
@@ -147,7 +159,7 @@
                 <div class="absolute inset-0 text-[18rem] sm:text-[20rem] md:text-[28rem] font-bold font-playfair opacity-20 blur-xl animate-pulse" style="animation-delay: 1s; color: rgba(192, 132, 252, 0.6); -webkit-text-stroke: 0px;">50</div>
 
                 <!-- Número principal SIN efecto 3D -->
-                <h1 class="text-[18rem] sm:text-[20rem] md:text-[28rem] font-bold font-playfair relative z-10 transform group-hover/number:scale-110 transition-all duration-500 animate-float"
+                <h1 class="text-[18rem] sm:text-[20rem] md:text-[28rem] font-bold font-playfair relative z-10 transform group-hover/number:scale-110 transition-all duration-300 animate-float"
                     style="
                         background: linear-gradient(to bottom, rgb(253, 224, 71), rgb(234, 179, 8), rgb(161, 98, 7));
                         -webkit-background-clip: text;
@@ -191,7 +203,7 @@
                 </div>
 
                 <!-- Nombre principal con efectos espectaculares -->
-                <h2 class="relative text-4xl sm:text-5xl md:text-7xl font-bold font-playfair z-10 transform group-hover/nombre:scale-105 transition-all duration-500 animate-float-slow"
+                <h2 class="relative text-4xl sm:text-5xl md:text-7xl font-bold font-playfair z-10 transform group-hover/nombre:scale-105 transition-all duration-300 animate-float-slow"
                     style="
                         background: linear-gradient(135deg, rgb(236, 72, 153), rgb(219, 39, 119), rgb(190, 24, 93), rgb(244, 114, 182));
                         -webkit-background-clip: text;
@@ -223,14 +235,14 @@
                         <div class="absolute -top-3 -left-3 w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full shadow-lg animate-bounce-slow"></div>
                         <div class="absolute -top-3 -right-3 w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full shadow-lg animate-bounce-slow" style="animation-delay: 0.5s;"></div>
 
-                        <p class="flex items-center justify-center gap-2 md:gap-3 text-gray-800 font-semibold text-center">
-                            <span class="text-xl md:text-2xl animate-bounce-slow flex-shrink-0">🗓️</span>
-                            <span>Sabado 27 de Diciembre de 2025</span>
+                        <p class="flex items-center justify-center gap-3 md:gap-4 text-center">
+                            <span class="text-3xl md:text-4xl animate-bounce-slow flex-shrink-0">🗓️</span>
+                            <span class="text-xl md:text-3xl font-bold bg-gradient-to-r from-pink-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Sábado 27 de Diciembre de 2025</span>
                         </p>
-                        <div class="w-full h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent"></div>
-                        <p class="flex items-center justify-center gap-2 md:gap-3 text-gray-800 font-semibold">
-                            <span class="text-xl md:text-2xl animate-bounce-slow flex-shrink-0" style="animation-delay: 0.3s;">🕒</span>
-                            <span>03:30 pm</span>
+                        <div class="w-full h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent rounded-full my-2"></div>
+                        <p class="flex items-center justify-center gap-3 md:gap-4">
+                            <span class="text-3xl md:text-4xl animate-bounce-slow flex-shrink-0" style="animation-delay: 0.3s;">🕒</span>
+                            <span class="text-xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 bg-clip-text text-transparent">03:30 pm</span>
                         </p>
                     </div>
                 </div>
@@ -558,7 +570,7 @@
 
                         <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform group-hover:scale-105 transition-all duration-300 border-4 border-white">
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/normitis.png" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover transition-transform duration-500 hover:scale-110">
+                                <img src="Fotos/normitis.png" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover transition-transform duration-300 hover:scale-110">
                             </div>
 
                             <div class="p-6 bg-white">
@@ -576,7 +588,7 @@
 
                         <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform group-hover:scale-105 transition-all duration-300 border-4 border-white">
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/capulla.jpeg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="Fotos/capulla.jpeg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-300">
                                 <!-- Overlay con gradiente -->
                                 <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -598,7 +610,7 @@
                             <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
 
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/Normis1.jpeg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="Fotos/Normis1.jpeg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-300">
                                 <!-- Overlay con gradiente -->
                                 <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -621,7 +633,7 @@
                             <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
 
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/FAMILIA.jpeg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="Fotos/FAMILIA.jpeg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-300">
                                 <!-- Overlay con gradiente -->
                                 <div class="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -643,7 +655,7 @@
                             <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
 
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/normis2.jpg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="Fotos/normis2.jpg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-300">
                                 <!-- Overlay con gradiente -->
                                 <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -666,7 +678,7 @@
                             <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
 
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/familiaa4.jpeg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="Fotos/familiaa4.jpeg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-300">
                                 <!-- Overlay con gradiente -->
                                 <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -688,7 +700,7 @@
                             <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
 
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/normis3.jpg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="Fotos/normis3.jpg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-300">
                                 <!-- Overlay con gradiente -->
                                 <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -711,7 +723,7 @@
                             <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
 
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/familiachalma.jpg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="Fotos/familiachalma.jpg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-300">
                                 <!-- Overlay con gradiente -->
                                 <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -733,7 +745,7 @@
                             <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-red-400 to-red-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
 
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/normsi5.jpg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="Fotos/normsi5.jpg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-300">
                                 <!-- Overlay con gradiente -->
                                 <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -756,7 +768,7 @@
                             <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-teal-400 to-cyan-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
 
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/trescruces.jpg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="Fotos/trescruces.jpg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-300">
                                 <!-- Overlay con gradiente -->
                                 <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -777,7 +789,7 @@
                             <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-brown-400 to-brown-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
 
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/normis4.jpg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="Fotos/normis4.jpg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-300">
                                 <!-- Overlay con gradiente -->
                                 <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -800,7 +812,7 @@
                             <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
 
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/familiatijuana.jpg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="Fotos/familiatijuana.jpg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-300">
                                 <!-- Overlay con gradiente -->
                                 <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -822,7 +834,7 @@
                             <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
 
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/normis6.jpg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="Fotos/normis6.jpg" alt="Foto en campo de flores" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-300">
                                 <!-- Overlay con gradiente -->
                                 <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -846,7 +858,7 @@
                             <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-red-400 to-red-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
 
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/riofamilia.jpg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="Fotos/riofamilia.jpg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-300">
                                 <!-- Overlay con gradiente -->
                                 <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -870,7 +882,7 @@
                             <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-red-400 to-red-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
 
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/ventura.jpg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="Fotos/ventura.jpg" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-300">
                                 <!-- Overlay con gradiente -->
                                 <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -895,7 +907,7 @@
                             <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-brown-400 to-brown-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
 
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/edi.png" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="Fotos/edi.png" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-300">
                                 <!-- Overlay con gradiente -->
                                 <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -918,7 +930,7 @@
                             <div class="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-brown-400 to-brown-600 rounded-full z-10 shadow-lg group-hover:scale-110 transition-transform"></div>
 
                             <div class="relative overflow-hidden">
-                                <img src="Fotos/normiuxin.png" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="Fotos/normiuxin.png" alt="Foto en estudio" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-300">
                                 <!-- Overlay con gradiente -->
                                 <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -1001,15 +1013,22 @@
                     </div>
                 </div>
 
-                <!-- Botón mejorado -->
-                <div class="relative group/button">
-                    <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover/button:opacity-75 transition-opacity animate-pulse-glow"></div>
+                <!-- Botones de navegación -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Botón Google Maps -->
                     <a href="https://www.google.com/maps/search/?api=1&query=M.+Avila+Camacho+46+Benito+Juarez+Xochitepec+Morelos+Mexico"
                        target="_blank"
-                       class="pulse-button relative block w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white text-center py-5 rounded-xl font-bold text-lg hover:from-pink-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-2xl border-2 border-white flex items-center justify-center gap-3">
-                        <span class="text-2xl">🗺️</span>
+                       class="pulse-button w-full bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 text-white text-center py-5 rounded-xl font-bold text-lg hover:from-pink-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-2xl border-2 border-white flex items-center justify-center gap-3">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Google_Maps_icon_%282020%29.svg" alt="Google Maps" class="w-6 h-6 md:w-7 md:h-7">
                         Abrir en Google Maps
-                        <span class="text-2xl">📱</span>
+                    </a>
+
+                    <!-- Botón Waze -->
+                    <a href="https://waze.com/ul?q=M.+Avila+Camacho+46+Benito+Juarez+Xochitepec+Morelos+Mexico&navigate=yes"
+                       target="_blank"
+                       class="pulse-button w-full bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 text-white text-center py-5 rounded-xl font-bold text-lg hover:from-pink-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-2xl border-2 border-white flex items-center justify-center gap-3">
+                        <img src="https://cdn-icons-png.flaticon.com/512/732/732257.png" alt="Waze" class="w-6 h-6 md:w-7 md:h-7">
+                        Abrir en Waze
                     </a>
                 </div>
                 
@@ -1071,8 +1090,11 @@
                 <!-- Título -->
                 <div class="text-center mb-6">
                     <div class="inline-block mb-3">
-                        <span class="text-6xl animate-bounce-slow">📅</span>
+                        <span class="text-6xl animate-bounce-slow">🎉</span>
                     </div>
+                    <p class="text-xl md:text-2xl font-semibold text-gray-800 mb-3">
+                        Sábado 27 de Diciembre de 2025
+                    </p>
                     <h3 class="text-2xl md:text-4xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-purple-700 mb-3">
                         No te lo pierdas
                     </h3>
@@ -1096,6 +1118,78 @@
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute top-1/4 left-1/4 w-32 h-32 bg-pink-300 rounded-full opacity-20 blur-3xl animate-pulse"></div>
             <div class="absolute bottom-1/4 right-1/4 w-32 h-32 bg-purple-300 rounded-full opacity-20 blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+    </section>
+
+    <!-- Mensaje Final Emotivo -->
+    <section class="flex items-center justify-center px-4 py-12 md:py-16 relative overflow-hidden">
+        <!-- Efectos de fondo -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-40 h-40 bg-pink-300 rounded-full opacity-20 blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/3 right-1/3 w-40 h-40 bg-purple-300 rounded-full opacity-20 blur-3xl animate-pulse" style="animation-delay: 1.5s;"></div>
+            <div class="absolute top-1/2 left-1/2 w-32 h-32 bg-yellow-300 rounded-full opacity-15 blur-3xl animate-pulse" style="animation-delay: 0.8s;"></div>
+            <!-- Emojis flotantes -->
+            <div class="absolute top-20 left-1/4 text-4xl opacity-10 animate-float">💖</div>
+            <div class="absolute bottom-20 right-1/4 text-3xl opacity-10 animate-float-slow">✨</div>
+            <div class="absolute top-1/3 right-1/5 text-2xl opacity-10 animate-bounce-slow">🎂</div>
+            <div class="absolute bottom-1/3 left-1/5 text-3xl opacity-10 animate-float">🎉</div>
+        </div>
+
+        <div class="max-w-4xl mx-auto w-full relative z-10">
+            <div class="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 relative group border-4 border-pink-300 scroll-animate">
+                <!-- Brillo detrás de la tarjeta -->
+                <div class="absolute inset-0 bg-gradient-to-br from-pink-300 via-purple-300 to-yellow-300 rounded-3xl blur-xl opacity-30 group-hover:opacity-40 transition-opacity animate-pulse-glow"></div>
+
+                <!-- Decoraciones en las esquinas -->
+                <div class="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full animate-bounce-slow shadow-lg"></div>
+                <div class="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full animate-bounce-slow shadow-lg" style="animation-delay: 0.5s;"></div>
+                <div class="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full animate-bounce-slow shadow-lg" style="animation-delay: 1s;"></div>
+                <div class="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-to-br from-pink-400 to-yellow-400 rounded-full animate-bounce-slow shadow-lg" style="animation-delay: 1.5s;"></div>
+
+                <!-- Contenido del mensaje -->
+                <div class="text-center relative space-y-6">
+                    <!-- Emojis decorativos superiores -->
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <span class="text-4xl md:text-5xl animate-bounce-slow">🎂</span>
+                        <span class="text-4xl md:text-5xl animate-bounce-slow" style="animation-delay: 0.2s;">🎉</span>
+                        <span class="text-4xl md:text-5xl animate-bounce-slow" style="animation-delay: 0.4s;">💕</span>
+                    </div>
+
+                    <!-- Título -->
+                    <h3 class="text-3xl md:text-5xl font-playfair text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-purple-600 to-pink-600 mb-6 font-bold leading-tight">
+                        ¡Celebremos Juntos!
+                    </h3>
+
+                    <!-- Mensaje emotivo -->
+                    <div class="space-y-4 text-lg md:text-2xl text-gray-700 font-semibold leading-relaxed">
+                        <p class="animate-fade-in">
+                            50 años de vida, amor y alegría
+                        </p>
+                        <p class="animate-fade-in" style="animation-delay: 0.3s;">
+                            50 años de momentos inolvidables
+                        </p>
+                        <p class="animate-fade-in" style="animation-delay: 0.6s;">
+                            Y muchos más por celebrar
+                        </p>
+                    </div>
+
+                    <!-- Mensaje principal destacado -->
+                    <div class="mt-8 p-6 bg-gradient-to-r from-pink-50 via-purple-50 to-pink-50 rounded-2xl border-2 border-pink-200">
+                        <p class="text-xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-purple-700">
+                            Tu presencia es el mejor regalo
+                        </p>
+                    </div>
+
+                    <!-- Cierre con corazones -->
+                    <div class="flex items-center justify-center gap-2 mt-6">
+                        <span class="text-3xl md:text-4xl animate-pulse">💖</span>
+                        <p class="text-lg md:text-xl text-gray-600 font-semibold">
+                            Con cariño, la familia
+                        </p>
+                        <span class="text-3xl md:text-4xl animate-pulse" style="animation-delay: 0.5s;">💖</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1133,7 +1227,7 @@
 
         .section, section {
             scroll-snap-align: start;
-            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
 
         /* Transiciones suaves entre secciones */
@@ -1143,7 +1237,7 @@
         }
 
         section.section-entering {
-            animation: sectionFadeIn 0.6s ease-out;
+            animation: sectionFadeIn 0.3s ease-out;
         }
 
         @keyframes sectionFadeIn {
@@ -1160,12 +1254,12 @@
         /* Animaciones más rápidas y fluidas para móvil */
         @media (max-width: 768px) {
             .section, section {
-                transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                            transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                            transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             }
 
             section.section-entering {
-                animation: sectionFadeInMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                animation: sectionFadeInMobile 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             }
 
             @keyframes sectionFadeInMobile {
@@ -1329,7 +1423,7 @@
         }
 
         .flip-container.flip span {
-            animation: numberChange 0.4s ease-in-out;
+            animation: numberChange 0.3s ease-in-out;
         }
 
         @keyframes numberChange {
@@ -1424,42 +1518,42 @@
 
         /* Mejoras para interactividad */
         .group:hover .group-hover\:animate-wiggle {
-            animation: wiggle 0.5s ease-in-out;
+            animation: wiggle 0.3s ease-in-out;
         }
 
         /* Efectos de desvanecimiento en cascada */
         .fade-cascade-1 {
-            animation: fade-in 0.6s ease-out 0.1s both;
+            animation: fade-in 0.3s ease-out 0.1s both;
         }
 
         .fade-cascade-2 {
-            animation: fade-in 0.6s ease-out 0.3s both;
+            animation: fade-in 0.3s ease-out 0.3s both;
         }
 
         .fade-cascade-3 {
-            animation: fade-in 0.6s ease-out 0.5s both;
+            animation: fade-in 0.3s ease-out 0.5s both;
         }
 
         .fade-cascade-4 {
-            animation: fade-in 0.6s ease-out 0.7s both;
+            animation: fade-in 0.3s ease-out 0.7s both;
         }
 
         /* Cascadas más rápidas para móvil */
         @media (max-width: 768px) {
             .fade-cascade-1 {
-                animation: fade-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s both;
+                animation: fade-in 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s both;
             }
 
             .fade-cascade-2 {
-                animation: fade-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s both;
+                animation: fade-in 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s both;
             }
 
             .fade-cascade-3 {
-                animation: fade-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.25s both;
+                animation: fade-in 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.25s both;
             }
 
             .fade-cascade-4 {
-                animation: fade-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.35s both;
+                animation: fade-in 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.35s both;
             }
         }
 
@@ -1516,8 +1610,8 @@
         .scroll-animate {
             opacity: 0;
             transform: translateY(20px) scale(0.98);
-            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-                        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .scroll-animate.visible {
@@ -1530,8 +1624,8 @@
             .scroll-animate {
                 opacity: 0;
                 transform: translateY(15px) scale(0.95);
-                transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                            transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                            transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             }
 
             .scroll-animate.visible {
@@ -1664,7 +1758,7 @@
 
             /* Efecto bounce suave en entrada de elementos */
             .scroll-animate.visible {
-                animation: mobileSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+                animation: mobileSlideIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
             }
 
             @keyframes mobileSlideIn {
@@ -1702,16 +1796,16 @@
         .scroll-animate-left {
             opacity: 0;
             transform: translateX(-30px) scale(0.98);
-            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-                        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         @media (max-width: 768px) {
             .scroll-animate-left {
                 opacity: 0;
                 transform: translateX(-20px) scale(0.96);
-                transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                            transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                            transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             }
         }
 
@@ -1735,7 +1829,7 @@
         /* Barras de audio visualizador */
         .audio-bar {
             height: 100%;
-            animation: audio-bounce 0.6s ease-in-out infinite alternate;
+            animation: audio-bounce 0.3s ease-in-out infinite alternate;
         }
 
         @keyframes audio-bounce {
@@ -2110,63 +2204,6 @@
         // Iniciar cuando la página cargue
         window.addEventListener('load', initParticles);
 
-        // Auto-scroll automático entre secciones
-        let currentSection = 0;
-        const sections = document.querySelectorAll('section');
-        let autoScrollEnabled = true;
-        let scrollTimeout;
-        let lastInteractionTime = Date.now();
-        const AUTO_SCROLL_INTERVAL = 8000; // 8 segundos entre transiciones
-        const INTERACTION_DELAY = 15000; // 15 segundos después de interacción manual
-
-        // Detectar interacción del usuario
-        function handleUserInteraction() {
-            lastInteractionTime = Date.now();
-            autoScrollEnabled = false;
-
-            // Reactivar auto-scroll después del delay
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(() => {
-                autoScrollEnabled = true;
-            }, INTERACTION_DELAY);
-        }
-
-        // Listeners para detectar interacción
-        window.addEventListener('wheel', handleUserInteraction, { passive: true });
-        window.addEventListener('touchstart', handleUserInteraction, { passive: true });
-        window.addEventListener('touchmove', handleUserInteraction, { passive: true });
-        window.addEventListener('keydown', handleUserInteraction);
-
-        // Detectar en qué sección está el usuario
-        function updateCurrentSection() {
-            const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-            sections.forEach((section, index) => {
-                const sectionTop = section.offsetTop;
-                const sectionBottom = sectionTop + section.offsetHeight;
-
-                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                    currentSection = index;
-                }
-            });
-        }
-
-        // Auto-scroll a la siguiente sección
-        function autoScroll() {
-            if (!autoScrollEnabled) return;
-
-            const timeSinceLastInteraction = Date.now() - lastInteractionTime;
-            if (timeSinceLastInteraction < INTERACTION_DELAY) return;
-
-            currentSection = (currentSection + 1) % sections.length;
-            sections[currentSection].scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Iniciar auto-scroll
-        setInterval(autoScroll, AUTO_SCROLL_INTERVAL);
-
-        // Actualizar sección actual al hacer scroll
-        window.addEventListener('scroll', updateCurrentSection, { passive: true });
         // ============ NUEVAS ANIMACIONES ============
 
         // 1. CONFETI AL CARGAR LA PÁGINA
@@ -2294,6 +2331,7 @@
             const audioBars = document.querySelectorAll('.audio-bar');
             const audioVisualizer = document.getElementById('audioVisualizer');
             const songTooltip = document.getElementById('songTooltip');
+            const clickMeIndicator = document.getElementById('clickMeIndicator');
             let isPlaying = false;
 
             // Función para mostrar el tooltip con el nombre de la canción
@@ -2318,6 +2356,8 @@
                     audioVisualizer.style.display = 'none';
                     // Ocultar el nombre de la canción
                     hideSongTooltip();
+                    // Mostrar indicador "Presióname"
+                    clickMeIndicator.style.opacity = '1';
                 } else {
                     music.play();
                     toggleButton.classList.add('playing');
@@ -2326,6 +2366,8 @@
                     audioVisualizer.style.display = 'flex';
                     // Mostrar el nombre de la canción
                     showSongTooltip();
+                    // Ocultar indicador "Presióname"
+                    clickMeIndicator.style.opacity = '0';
                 }
                 isPlaying = !isPlaying;
             }
@@ -2349,6 +2391,27 @@
 
             // Animación suave del control de música
             musicControl.classList.add('animate-fade-in');
+        });
+    </script>
+
+    <!-- Script para la línea indicadora de scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollLine = document.getElementById('scrollLine');
+            let hasScrolled = false;
+
+            function hideScrollLine() {
+                if (!hasScrolled && window.scrollY > 50) {
+                    hasScrolled = true;
+                    scrollLine.style.opacity = '0';
+
+                    setTimeout(() => {
+                        scrollLine.style.display = 'none';
+                    }, 500);
+                }
+            }
+
+            window.addEventListener('scroll', hideScrollLine, { passive: true });
         });
     </script>
 
